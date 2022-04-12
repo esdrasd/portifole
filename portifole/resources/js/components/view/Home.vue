@@ -25,7 +25,7 @@ export default {
     };
   },
   mounted() {
-    sessionStorage.setItem("cart", "[]");
+    console.log("oi");
     axios.get("show").then((response) => (this.info = response.data));
   },
   methods: {
