@@ -9,8 +9,12 @@
 </head>
 
 <body>
-    <div id="app"></div>
-    <script src="{{asset('./js/app.js')}}"></script>
+    <form id='form' action="" method="post" enctype="multipart/form-data">
+        @csrf
+        @method('POST')
+        <div id="app"></div>
+        <script src="{{asset('./js/app.js')}}"></script>
+    </form>
 </body>
 
 </html>

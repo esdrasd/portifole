@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\controller_pagamento;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+route::view('/', 'welcome')->name('index');
+route::post('add', [controller_pagamento::class, 'add'])->name('add');
