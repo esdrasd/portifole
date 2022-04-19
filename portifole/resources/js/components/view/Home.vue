@@ -1,14 +1,19 @@
 <template>
-  <h1>Home</h1>
+  <!-- {{ Object.assign(JSON.parse(info[0].img))[0] }} -->
+  {{ Object.assign(JSON.parse(info[0].img))[0] }}
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "Home",
+  data() {
+    return {
+      info: "",
+    };
+  },
   mounted() {
-    axios
-      .get("https://api.coindesk.com/v1/bpi/currentprice.json")
-      .then((response) => (this.info = response));
+    axios.get("show").then((res) => (this.info = res.data));
   },
 };
 </script>
