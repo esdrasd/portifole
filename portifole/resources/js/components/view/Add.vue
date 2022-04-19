@@ -1,6 +1,6 @@
 <template>
-  <input type="file" name="img" multiple accept="image/*" />
-  <input type="submit" @click="add()" />
+  <input type="file" name="img[]" multiple/>
+  <input type="submit" @click="add()" value='enviar'/>
 </template>
 
 <script>

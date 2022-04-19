@@ -17665,9 +17665,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
   type: "file",
-  name: "img",
-  multiple: "",
-  accept: "image/*"
+  name: "img[]",
+  multiple: ""
 }, null, -1
 /* HOISTED */
 );
@@ -17677,7 +17676,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     type: "submit",
     onClick: _cache[0] || (_cache[0] = function ($event) {
       return $options.add();
-    })
+    }),
+    value: "enviar"
   })], 64
   /* STABLE_FRAGMENT */
   );

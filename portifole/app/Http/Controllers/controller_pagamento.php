@@ -9,6 +9,11 @@ class controller_pagamento extends Controller
 {
     function add(Request $req)
     {
-        echo $req->file('img')->store('fotos','public');
+        $array = [];
+        foreach ($req->img as $value) {
+            array_push($array, $value);
+        }
+        print_r($array[0]);
+        // $req->file($value)->store('fotos', 'public');
     }
 }
