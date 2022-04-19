@@ -1,6 +1,15 @@
 <template>
-  <input type="file" name="img[]" multiple/>
-  <input type="submit" @click="add()" value='enviar'/>
+  <input type="text" name="nome" placeholder="Nome" />
+  <input type="text" name="price" placeholder="Price" />
+  <label for="file">selecione as imagens</label>
+  <input type="submit" @click="add()" value="enviar" />
+  <input
+    type="file"
+    id="file"
+    style="visibility: hidden"
+    name="img[]"
+    multiple
+  />
 </template>
 
 <script>
