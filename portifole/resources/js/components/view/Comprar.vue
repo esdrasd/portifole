@@ -8,9 +8,16 @@
           <img :src="'storage/' + fotos" style="height: 200px; width: 200px" />
         </div>
       </div>
-      <div v-for="(fotos, ii) in JSON.parse(img.img)" :key="fotos">
+      <div v-for="(prod, ii) in JSON.parse(img.img)" :key="prod">
         <input type="button" @click="cor(ii)" :value="'cor ' + ii" />
       </div>
+      <input
+        type="button"
+        @click="
+          add_cart(img.id, img.nome, img.price, JSON.parse(img.img)[corx])
+        "
+        value="add carrinho"
+      />
     </div>
   </div>
 </template>
@@ -24,6 +31,7 @@ export default {
       dados: [],
       id: 0,
       corx: 0,
+      vetor: [],
     };
   },
   props: {
@@ -36,6 +44,18 @@ export default {
   methods: {
     cor(ii) {
       this.corx = ii;
+    },
+    add_cart(id, nome, price, img) {
+      this.vetor.splice(0);
+      var json = { id, nome, price, img };
+      if (typeof sessionStorage.getItem("cart") === "string") {
+        var x = JSON.parse(sessionStorage.getItem("cart"));
+        for (let i = 0; i < x.length; i++) {
+          this.vetor.push(x[i]);
+        }
+      }
+      this.vetor.push(json);
+      sessionStorage.setItem("cart", JSON.stringify(this.vetor));
     },
   },
 };
