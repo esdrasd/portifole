@@ -1,5 +1,5 @@
 <template>
-  price:
+  <h1>price:</h1>
   <input type="hidden" id="produto" name="produto" />
   <input type="text" name="price" :value="price" />
 
@@ -52,7 +52,7 @@ export default {
     },
     pagamento() {
       document.getElementById("produto").value = JSON.stringify(this.dados);
-      document.getElementById("form").action = "pagamento";
+      document.getElementById("form").action = "boleto";
     },
   },
 };

@@ -22,6 +22,7 @@ export default {
     };
   },
   mounted() {
+    sessionStorage.setItem('cart','[]');
     axios.get("show").then((res) => (this.dados = res.data));
   },
   methods:{
