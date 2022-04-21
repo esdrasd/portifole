@@ -24,4 +24,20 @@ class controller_ecommerci extends Controller
     {
         return $model = model_produtos::all();
     }
+    function pagamento(Request $req)
+    {
+        echo $req->produto;
+        echo "<hr>";
+        foreach(json_decode($req->produto) as $i){
+            echo $i->id;
+            echo "<br>";
+            echo $i->nome;
+            echo "<br>";
+            echo $i->price;
+            echo "<br>";
+            echo $i->img;
+            echo "<hr>";
+        }
+        echo "price: ".$req->price;
+    }
 }

@@ -1,7 +1,7 @@
 <template>
   <div v-for="i in dados" :key="i">
     <router-link :to="'/comprar/' + i.nome">
-      <h1>{{ i.nome }} - {{ i.price }}</h1>
+      <h1>{{ i.nome }} <br> R$ {{ i.price }}</h1>
       <img
         :src="'storage/' + JSON.parse(i.img)[0]"
         style="height: 200px; width: 200px"
