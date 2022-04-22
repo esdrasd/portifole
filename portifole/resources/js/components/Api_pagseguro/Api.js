@@ -1,4 +1,4 @@
-var price = 500.00;
+var price = document.getElementById('price').value;
 var n_bandeira = 'visa';
 var numero = '4111111111111111';
 var cvv = '013';

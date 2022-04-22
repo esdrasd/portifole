@@ -20428,7 +20428,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var price = 500.00;
+var price = document.getElementById('price').value;
 var n_bandeira = 'visa';
 var numero = '4111111111111111';
 var cvv = '013';
