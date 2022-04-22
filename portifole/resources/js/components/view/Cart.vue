@@ -2,7 +2,6 @@
   <h1>price:</h1>
   <input type="hidden" id="produto" name="produto" />
   <input type="text" name="price" :value="price" />
-
   <input type="submit" @click="pagamento()" value="pagamento" />
   <hr />
   <div v-for="(i, key) in dados" :key="i">
@@ -20,6 +19,7 @@ export default {
     return {
       dados: [],
       price: 0,
+      modo:''
     };
   },
   mounted() {
@@ -54,6 +54,7 @@ export default {
       document.getElementById("produto").value = JSON.stringify(this.dados);
       document.getElementById("form").action = "boleto";
     },
+
   },
 };
 </script>

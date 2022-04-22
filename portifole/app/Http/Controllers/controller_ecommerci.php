@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\model_produtos;
+use Illuminate\Support\Facades\Http;
 
 class controller_ecommerci extends Controller
 {
@@ -24,11 +25,17 @@ class controller_ecommerci extends Controller
     {
         return $model = model_produtos::all();
     }
+    function id()
+    {
+        $url = "https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=esdrassousa76@gmail.com&token=13ACCD9BA759496B98B87DD7AD13DBD3";
+        $id = Http::post($url);
+        return json_encode(simplexml_load_string($id));
+    }
     function boleto(Request $req)
     {
         echo $req->produto;
         echo "<hr>";
-        foreach(json_decode($req->produto) as $i){
+        foreach (json_decode($req->produto) as $i) {
             echo $i->id;
             echo "<br>";
             echo $i->nome;
@@ -38,6 +45,6 @@ class controller_ecommerci extends Controller
             echo $i->img;
             echo "<hr>";
         }
-        echo "price: ".$req->price;
+        echo "price: " . $req->price;
     }
 }
