@@ -2,6 +2,23 @@
   <h1>price:</h1>
   <input type="hidden" id="produto" name="produto" />
   <input type="text" name="price" :value="price" />
+  <div>
+    <div>
+      <h1>Boleto</h1>
+      <input type="radio" id="boleto" value="boleto" v-model="modo" />
+      <label for="boleto">Boleto</label>
+      <p><input type="hidden" id="id_boleto" name="id_boleto" /></p>
+      <p><input type="hidden" id="id_comprador_boleto" name="id_comprador_boleto" /></p>
+    </div>
+    <br />
+    <div>
+      <h1>creditcard</h1>
+      <input type="radio" id="creditcard" value="creditcard" v-model="modo" />
+      <label for="creditcard">Cartao de Credito</label>
+      <p><input type="text" id="id_creditCard" name="id_creditCard" /></p>
+      <p><input type="text" id="id_comprador_creditCard" name="id_comprador_creditCard" /></p>
+    </div>
+  </div>
   <input type="submit" @click="pagamento()" value="pagamento" />
   <hr />
   <div v-for="(i, key) in dados" :key="i">
@@ -19,7 +36,7 @@ export default {
     return {
       dados: [],
       price: 0,
-      modo:''
+      modo: "",
     };
   },
   mounted() {
@@ -51,10 +68,13 @@ export default {
       sessionStorage.setItem("cart", x);
     },
     pagamento() {
-      document.getElementById("produto").value = JSON.stringify(this.dados);
-      document.getElementById("form").action = "boleto";
+      if (this.modo == "boleto") {
+        document.getElementById("produto").value = JSON.stringify(this.dados);
+        document.getElementById("form").action = "boleto";
+      } else if (this.modo == "creditcard") {
+        console.log("creditcard");
+      }
     },
-
   },
 };
 </script>
