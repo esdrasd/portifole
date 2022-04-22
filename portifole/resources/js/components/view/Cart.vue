@@ -8,7 +8,13 @@
       <input type="radio" id="boleto" value="boleto" v-model="modo" />
       <label for="boleto">Boleto</label>
       <p><input type="hidden" id="id_boleto" name="id_boleto" /></p>
-      <p><input type="hidden" id="id_comprador_boleto" name="id_comprador_boleto" /></p>
+      <p>
+        <input
+          type="hidden"
+          id="id_comprador_boleto"
+          name="id_comprador_boleto"
+        />
+      </p>
     </div>
     <br />
     <div>
@@ -16,7 +22,13 @@
       <input type="radio" id="creditcard" value="creditcard" v-model="modo" />
       <label for="creditcard">Cartao de Credito</label>
       <p><input type="text" id="id_creditCard" name="id_creditCard" /></p>
-      <p><input type="text" id="id_comprador_creditCard" name="id_comprador_creditCard" /></p>
+      <p>
+        <input
+          type="text"
+          id="id_comprador_creditCard"
+          name="id_comprador_creditCard"
+        />
+      </p>
     </div>
   </div>
   <input type="submit" @click="pagamento()" value="pagamento" />

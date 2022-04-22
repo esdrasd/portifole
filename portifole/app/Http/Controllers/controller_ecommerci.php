@@ -57,12 +57,12 @@ class controller_ecommerci extends Controller
 
         foreach (json_decode($req->produto) as $i) {
             $key++;
-            $prod['itemId'.$key] = $key;
-            $prod['itemDescription'.$key] = $i->nome;
-            $prod['itemAmount'.$key] = number_format($i->price, 2, '.', '');
-            $prod['itemQuantity'.$key] = '1';
+            $prod['itemId' . $key] = $key;
+            $prod['itemDescription' . $key] = $i->nome;
+            $prod['itemAmount' . $key] = number_format($i->price, 2, '.', '');
+            $prod['itemQuantity' . $key] = '1';
         }
-        
+
         $shipping['shippingAddressRequired'] = "true";
         $shipping['shippingAddressStreet'] = "Av. Brig. Faria Lima";
         $shipping['shippingAddressNumber'] = "1384";
@@ -73,7 +73,7 @@ class controller_ecommerci extends Controller
         $shipping['shippingAddressState'] = "SP";
         $shipping['shippingAddressCountry'] = "BRA";
 
-        $array = $config+$comprador+$prod+$shipping;
+        $array = $config + $comprador + $prod + $shipping;
         $url = "https://ws.sandbox.pagseguro.uol.com.br/v2/transactions?email=esdrassousa76@gmail.com&token=13ACCD9BA759496B98B87DD7AD13DBD3";
         $id = Http::asForm()->post($url, $array);
         $xml = simplexml_load_string($id);
