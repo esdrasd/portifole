@@ -19840,7 +19840,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         document.getElementById("produto").value = JSON.stringify(this.dados);
         document.getElementById("form").action = "boleto";
       } else if (this.modo == "creditcard") {
-        console.log("creditcard");
+        document.getElementById("form").action = "credito";
       }
     }
   }
@@ -20136,17 +20136,21 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 
 var _hoisted_3 = ["value"];
 
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", null, "Boleto", -1
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", null, null, -1
 /* HOISTED */
 );
 
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", null, "Boleto", -1
+/* HOISTED */
+);
+
+var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": "boleto"
 }, "Boleto", -1
 /* HOISTED */
 );
 
-var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
   type: "hidden",
   id: "id_boleto",
   name: "id_boleto"
@@ -20154,7 +20158,7 @@ var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 /* HOISTED */
 );
 
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
   type: "hidden",
   id: "id_comprador_boleto",
   name: "id_comprador_boleto"
@@ -20162,44 +20166,30 @@ var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 /* HOISTED */
 );
 
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
 /* HOISTED */
 );
 
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", null, "creditcard", -1
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", null, "creditcard", -1
 /* HOISTED */
 );
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "for": "creditcard"
-}, "Cartao de Credito", -1
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<label for=\"creditcard\">Cartao de Credito</label><p><input type=\"text\" id=\"id_creditCard\" name=\"id_creditCard\"></p><p><input type=\"text\" id=\"id_comprador_creditCard\" name=\"id_comprador_creditCard\"></p><p><input type=\"text\" id=\"id_card\" name=\"id_card\"></p><p><input type=\"text\" id=\"n_card\" name=\"n_card\" placeholder=\"n_card\" value=\"4111111111111111\"></p><p><div id=\"bandeira\"></div><select id=\"parcelas\" name=\"parcelas\"><option>parcelas</option></select></p><p><input type=\"text\" id=\"v_parcela\" name=\"v_parcela\" placeholder=\"valor da parcela\"></p><p><input type=\"text\" id=\"t_parcela\" name=\"t_parcela\" placeholder=\"total da parcela\"></p>", 8);
+
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  id: "meios_pagamentos"
+}, null, -1
 /* HOISTED */
 );
 
-var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-  type: "text",
-  id: "id_creditCard",
-  name: "id_creditCard"
-})], -1
+var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", null, null, -1
 /* HOISTED */
 );
 
-var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-  type: "text",
-  id: "id_comprador_creditCard",
-  name: "id_comprador_creditCard"
-})], -1
-/* HOISTED */
-);
+var _hoisted_21 = ["src"];
+var _hoisted_22 = ["onClick"];
 
-var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", null, null, -1
-/* HOISTED */
-);
-
-var _hoisted_14 = ["src"];
-var _hoisted_15 = ["onClick"];
-
-var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", null, null, -1
+var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", null, null, -1
 /* HOISTED */
 );
 
@@ -20210,7 +20200,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     value: $data.price
   }, null, 8
   /* PROPS */
-  , _hoisted_3), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  , _hoisted_3), _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "radio",
     id: "boleto",
     value: "boleto",
@@ -20219,7 +20209,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelRadio, $data.modo]]), _hoisted_5, _hoisted_6, _hoisted_7]), _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelRadio, $data.modo]]), _hoisted_6, _hoisted_7, _hoisted_8]), _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "radio",
     id: "creditcard",
     value: "creditcard",
@@ -20228,13 +20218,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelRadio, $data.modo]]), _hoisted_10, _hoisted_11, _hoisted_12])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelRadio, $data.modo]]), _hoisted_11])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "submit",
     onClick: _cache[2] || (_cache[2] = function ($event) {
       return $options.pagamento();
     }),
     value: "pagamento"
-  }), _hoisted_13, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.dados, function (i, key) {
+  })]), _hoisted_19, _hoisted_20, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.dados, function (i, key) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       key: i
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(i.nome), 1
@@ -20249,7 +20239,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       }
     }, null, 8
     /* PROPS */
-    , _hoisted_14)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    , _hoisted_21)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
       type: "button",
       value: "delete",
       onClick: function onClick($event) {
@@ -20257,7 +20247,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       }
     }, null, 8
     /* PROPS */
-    , _hoisted_15), _hoisted_16]);
+    , _hoisted_22), _hoisted_23]);
   }), 128
   /* KEYED_FRAGMENT */
   ))], 64
@@ -20455,11 +20445,99 @@ function id() {
       document.getElementById("id_creditCard").value = id.id;
       PagSeguroDirectPayment.setSessionId(id.id);
       id_comprador();
+      meios_pagamentos();
+      credit_token();
     }
   };
 
   xhttp.open("GET", "id");
   xhttp.send();
+}
+
+function meios_pagamentos() {
+  PagSeguroDirectPayment.getPaymentMethods({
+    amount: price,
+    success: function success(response) {
+      var img_boleto = response.paymentMethods.BOLETO.options.BOLETO.images.SMALL.path;
+      document.getElementById('meios_pagamentos').innerHTML += "<img src=" + 'https://stc.pagseguro.uol.com.br/' + img_boleto + ">";
+      var credit = response.paymentMethods.CREDIT_CARD.options;
+      var array_credit = Object.values(credit);
+
+      for (var i = 0; i < array_credit.length; i++) {
+        var img_card = array_credit[i].images.SMALL.path;
+        document.getElementById('meios_pagamentos').innerHTML += "<img src=" + 'https://stc.pagseguro.uol.com.br/' + img_card + ">";
+      }
+
+      bandeira();
+    }
+  });
+}
+
+function bandeira() {
+  document.getElementById('n_card').onkeyup = function () {
+    var n_card = document.getElementById('n_card').value;
+
+    if (n_card.length == 6 || n_card.length > 6) {
+      PagSeguroDirectPayment.getBrand({
+        cardBin: n_card,
+        success: function success(response) {
+          var nome = response.brand.name;
+          document.getElementById('bandeira').innerHTML = "<img src=" + 'https://stc.pagseguro.uol.com.br/public/img/payment-methods-flags/42x20/' + nome + '.png' + ">";
+          parcela();
+        }
+      });
+    } else {
+      document.getElementById('bandeira').innerHTML = '';
+    }
+  };
+}
+
+function parcela() {
+  PagSeguroDirectPayment.getInstallments({
+    amount: price,
+    maxInstallmentNoInterest: 2,
+    brand: n_bandeira,
+    success: function success(response) {
+      var parcelas = Object.values(response.installments)[0];
+      document.getElementById('parcelas').innerHTML = '';
+      document.getElementById('parcelas').innerHTML = '<option>parcelas</option>';
+      var ii = 1;
+
+      for (var i = 0; i < parcelas.length; i++) {
+        document.getElementById('parcelas').innerHTML += "<option value=" + ii + ">" + 'parcelas: ' + parcelas[i].quantity + "</option>"; // console.log(ii);
+
+        document.getElementById('parcelas').onclick = function () {
+          var qtd = document.getElementById('parcelas').value;
+          var id = JSON.parse(qtd);
+          id -= 1; // console.log(id-=1);
+
+          document.getElementById('v_parcela').value = parcelas[id].installmentAmount;
+          document.getElementById('t_parcela').value = parcelas[id].totalAmount;
+        };
+
+        ii++;
+      }
+    }
+  });
+}
+
+function credit_token() {
+  PagSeguroDirectPayment.createCardToken({
+    cardNumber: numero,
+    // Número do cartão de crédito
+    brand: n_bandeira,
+    // Bandeira do cartão
+    cvv: cvv,
+    // CVV do cartão
+    expirationMonth: mes,
+    // Mês da expiração do cartão
+    expirationYear: ano,
+    // Ano da expiração do cartão, é necessário os 4 dígitos.
+    success: function success(response) {
+      var id_card = response.card.token;
+      document.getElementById('id_card').value = id_card;
+    }
+  });
 }
 
 function id_comprador() {

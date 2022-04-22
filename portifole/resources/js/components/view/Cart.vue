@@ -2,6 +2,7 @@
   <h1>price:</h1>
   <input type="hidden" id="produto" name="produto" />
   <input type="text" name="price" :value="price" />
+  <hr />
   <div>
     <div>
       <h1>Boleto</h1>
@@ -21,7 +22,9 @@
       <h1>creditcard</h1>
       <input type="radio" id="creditcard" value="creditcard" v-model="modo" />
       <label for="creditcard">Cartao de Credito</label>
-      <p><input type="text" id="id_creditCard" name="id_creditCard" /></p>
+      <p>
+        <input type="text" id="id_creditCard" name="id_creditCard" />
+      </p>
       <p>
         <input
           type="text"
@@ -29,9 +32,44 @@
           name="id_comprador_creditCard"
         />
       </p>
+      <p>
+        <input type="text" id="id_card" name="id_card" />
+      </p>
+      <p>
+        <input
+          type="text"
+          id="n_card"
+          name="n_card"
+          placeholder="n_card"
+          value="4111111111111111"
+        />
+      </p>
+      <p>
+        <div id="bandeira"></div>
+        <select id="parcelas" name="parcelas">
+          <option>parcelas</option>
+        </select>
+      </p>
+      <p>
+        <input
+          type="text"
+          id="v_parcela"
+          name="v_parcela"
+          placeholder="valor da parcela"
+        />
+      </p>
+      <p>
+        <input
+          type="text"
+          id="t_parcela"
+          name="t_parcela"
+          placeholder="total da parcela"
+        />
+      </p>
     </div>
   </div>
-  <input type="submit" @click="pagamento()" value="pagamento" />
+  <p><input type="submit" @click="pagamento()" value="pagamento" /></p>
+  <div id="meios_pagamentos"></div>
   <hr />
   <div v-for="(i, key) in dados" :key="i">
     <h1>{{ i.nome }}</h1>
@@ -84,7 +122,7 @@ export default {
         document.getElementById("produto").value = JSON.stringify(this.dados);
         document.getElementById("form").action = "boleto";
       } else if (this.modo == "creditcard") {
-        console.log("creditcard");
+        document.getElementById("form").action = "credito";
       }
     },
   },

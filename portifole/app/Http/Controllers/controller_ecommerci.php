@@ -79,4 +79,8 @@ class controller_ecommerci extends Controller
         $xml = simplexml_load_string($id);
         return redirect($xml->paymentLink);
     }
+    function credito(Request $req)
+    {
+        return $req;
+    }
 }
