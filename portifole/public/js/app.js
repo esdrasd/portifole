@@ -19840,6 +19840,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         document.getElementById("produto").value = JSON.stringify(this.dados);
         document.getElementById("form").action = "boleto";
       } else if (this.modo == "creditcard") {
+        document.getElementById("produto").value = JSON.stringify(this.dados);
         document.getElementById("form").action = "credito";
       }
     }
@@ -20174,28 +20175,29 @@ var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<label for=\"creditcard\">Cartao de Credito</label><p><input type=\"text\" id=\"id_creditCard\" name=\"id_creditCard\"></p><p><input type=\"text\" id=\"id_comprador_creditCard\" name=\"id_comprador_creditCard\"></p><p><input type=\"text\" id=\"id_card\" name=\"id_card\"></p><p><input type=\"text\" id=\"n_card\" name=\"n_card\" placeholder=\"n_card\" value=\"4111111111111111\"></p><p><div id=\"bandeira\"></div><select id=\"parcelas\" name=\"parcelas\"><option>parcelas</option></select></p><p><input type=\"text\" id=\"v_parcela\" name=\"v_parcela\" placeholder=\"valor da parcela\"></p><p><input type=\"text\" id=\"t_parcela\" name=\"t_parcela\" placeholder=\"total da parcela\"></p>", 8);
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<label for=\"creditcard\">Cartao de Credito</label><p><input type=\"hidden\" id=\"id_creditCard\" name=\"id_creditCard\"></p><p><input type=\"hidden\" id=\"id_comprador_creditCard\" name=\"id_comprador_creditCard\"></p><p><input type=\"hidden\" id=\"id_card\" name=\"id_card\"></p><p><input type=\"text\" id=\"n_card\" name=\"n_card\" placeholder=\"n_card\" value=\"4111111111111111\"></p><p><input type=\"text\" id=\"cvv\" name=\"cvv\" placeholder=\"cvv\" value=\"013\"></p><p><input type=\"text\" id=\"mes\" name=\"mes\" placeholder=\"mes\" value=\"12\"></p><p><input type=\"text\" id=\"ano\" name=\"ano\" placeholder=\"ano\" value=\"2026\"></p><p><h1><p><div id=\"n_bandeira\"></div></p></h1><p><div id=\"bandeira\"></div></p><select id=\"parcelas\" name=\"parcelas\"><option>parcelas</option></select></p><p><input type=\"text\" id=\"v_parcela\" name=\"v_parcela\" placeholder=\"valor da parcela\"></p><p><input type=\"text\" id=\"t_parcela\" name=\"t_parcela\" placeholder=\"total da parcela\"></p>", 11);
 
-var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   id: "meios_pagamentos"
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", null, null, -1
+var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", null, null, -1
 /* HOISTED */
 );
 
-var _hoisted_21 = ["src"];
-var _hoisted_22 = ["onClick"];
+var _hoisted_24 = ["src"];
+var _hoisted_25 = ["onClick"];
 
-var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", null, null, -1
+var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", null, null, -1
 /* HOISTED */
 );
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [_hoisted_1, _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
+    id: "price",
     name: "price",
     value: $data.price
   }, null, 8
@@ -20224,7 +20226,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return $options.pagamento();
     }),
     value: "pagamento"
-  })]), _hoisted_19, _hoisted_20, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.dados, function (i, key) {
+  })]), _hoisted_22, _hoisted_23, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.dados, function (i, key) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       key: i
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(i.nome), 1
@@ -20239,7 +20241,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       }
     }, null, 8
     /* PROPS */
-    , _hoisted_21)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    , _hoisted_24)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
       type: "button",
       value: "delete",
       onClick: function onClick($event) {
@@ -20247,7 +20249,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       }
     }, null, 8
     /* PROPS */
-    , _hoisted_22), _hoisted_23]);
+    , _hoisted_25), _hoisted_26]);
   }), 128
   /* KEYED_FRAGMENT */
   ))], 64
@@ -20404,16 +20406,16 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
-/* harmony import */ var _components_App_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/App.vue */ "./resources/js/components/App.vue");
-/* harmony import */ var _components_router_Router_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/router/Router.js */ "./resources/js/components/router/Router.js");
-/* harmony import */ var _components_Api_pagseguro_Api_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Api_pagseguro/Api.js */ "./resources/js/components/Api_pagseguro/Api.js");
+/* harmony import */ var _components_Api_pagseguro_Api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Api_pagseguro/Api.js */ "./resources/js/components/Api_pagseguro/Api.js");
+/* harmony import */ var _components_App_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/App.vue */ "./resources/js/components/App.vue");
+/* harmony import */ var _components_router_Router_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/router/Router.js */ "./resources/js/components/router/Router.js");
+
 
  // navbar e url
 
  //Rotas_URL e Paginas
 
-
-(0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)(_components_App_vue__WEBPACK_IMPORTED_MODULE_1__["default"]).use(_components_router_Router_js__WEBPACK_IMPORTED_MODULE_2__["default"]).use(_components_Api_pagseguro_Api_js__WEBPACK_IMPORTED_MODULE_3__["default"]).mount('#app');
+(0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)(_components_App_vue__WEBPACK_IMPORTED_MODULE_2__["default"]).use(_components_router_Router_js__WEBPACK_IMPORTED_MODULE_3__["default"]).use(_components_Api_pagseguro_Api_js__WEBPACK_IMPORTED_MODULE_1__["default"]).mount('#app');
 
 /***/ }),
 
@@ -20428,13 +20430,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var price = document.getElementById('price').value;
-var n_bandeira = 'visa';
-var numero = '4111111111111111';
-var cvv = '013';
-var mes = '12';
-var ano = '2026';
-
+// var price = 500.00;
+// var n_bandeira = 'visa';
+// var numero = '4111111111111111';
+// var cvv = '013';
+// var mes = '12';
+// var ano = '2026';
 function id() {
   var xhttp = new XMLHttpRequest();
 
@@ -20456,7 +20457,7 @@ function id() {
 
 function meios_pagamentos() {
   PagSeguroDirectPayment.getPaymentMethods({
-    amount: price,
+    amount: document.getElementById('price').value,
     success: function success(response) {
       var img_boleto = response.paymentMethods.BOLETO.options.BOLETO.images.SMALL.path;
       document.getElementById('meios_pagamentos').innerHTML += "<img src=" + 'https://stc.pagseguro.uol.com.br/' + img_boleto + ">";
@@ -20483,7 +20484,8 @@ function bandeira() {
         success: function success(response) {
           var nome = response.brand.name;
           document.getElementById('bandeira').innerHTML = "<img src=" + 'https://stc.pagseguro.uol.com.br/public/img/payment-methods-flags/42x20/' + nome + '.png' + ">";
-          parcela();
+          parcela(nome);
+          credit_token(nome);
         }
       });
     } else {
@@ -20492,11 +20494,11 @@ function bandeira() {
   };
 }
 
-function parcela() {
+function parcela(nome) {
   PagSeguroDirectPayment.getInstallments({
-    amount: price,
+    amount: document.getElementById('price').value,
     maxInstallmentNoInterest: 2,
-    brand: n_bandeira,
+    brand: nome,
     success: function success(response) {
       var parcelas = Object.values(response.installments)[0];
       document.getElementById('parcelas').innerHTML = '';
@@ -20521,17 +20523,21 @@ function parcela() {
   });
 }
 
-function credit_token() {
+function credit_token(nome) {
+  if (nome) {
+    document.getElementById('n_bandeira').innerHTML = nome;
+  }
+
   PagSeguroDirectPayment.createCardToken({
-    cardNumber: numero,
+    cardNumber: document.getElementById('n_card').value,
     // Número do cartão de crédito
-    brand: n_bandeira,
+    brand: nome,
     // Bandeira do cartão
-    cvv: cvv,
+    cvv: document.getElementById('cvv').value,
     // CVV do cartão
-    expirationMonth: mes,
+    expirationMonth: document.getElementById('mes').value,
     // Mês da expiração do cartão
-    expirationYear: ano,
+    expirationYear: document.getElementById('ano').value,
     // Ano da expiração do cartão, é necessário os 4 dígitos.
     success: function success(response) {
       var id_card = response.card.token;

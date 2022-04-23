@@ -7,7 +7,7 @@ import Cart from '../view/Cart.vue'
 const routes = [
     { path: '/', component: Home },
     { path: '/add', component: Add },
-    { path: '/comprar/:produtos', component: Comprar, props: true},
+    { path: '/comprar/:produtos', component: Comprar, props: true },
     { path: '/cart', component: Cart },
 ]
 
