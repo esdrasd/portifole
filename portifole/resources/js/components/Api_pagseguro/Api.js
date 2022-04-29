@@ -79,8 +79,8 @@ function parcela(nome) {
                     var id = JSON.parse(qtd);
                     id -= 1
                         // console.log(id-=1);
-                    document.getElementById('v_parcela').value = parcelas[id].installmentAmount;
-                    document.getElementById('t_parcela').value = parcelas[id].totalAmount;
+                    document.getElementById('v_parcela').innerHTML = parcelas[id].installmentAmount;
+                    document.getElementById('t_parcela').innerHTML = parcelas[id].totalAmount;
                 }
                 ii++
             }

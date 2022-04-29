@@ -1,0 +1,124 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* center e alinhamento */
+.HomeCards,
+.HomeCardIMG {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* cener alinhamento */
+.HomeCards {
+    height: 80vh;
+    width: 100%;
+}
+
+/* img */
+.HomeCardIMG {
+    height: 100%;
+    width: 100%;
+}
+
+/* margin */
+.HomeCardMargin {
+    margin: 40px;
+}
+
+/* center card */
+.ComprarCss {
+    /* border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+}
+
+/*center price e button e text*/
+.ComprarTamanho,
+.ComprarTamanhoitem {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.ComprarTamanho {
+    /* border: 1px solid red; */
+    padding: 100px;
+}
+
+.ComprarTamanhoitem {
+    /* border: 1px solid cadetblue; */
+    padding: 30px;
+}
+
+.ComprarOrd {
+    /* border: 1px solid blue; */
+    margin: 10px;
+}
+
+/* center */
+.Cart-Ordem,.Cart-Item{
+    /* border: 1px solid cadetblue; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;    
+}
+
+/* center */
+.Cart-Ordem {
+    width: 100%;
+    height: 80vh;
+}
+
+.Cart-Card {    
+    /* border: 1px solid blue; */
+    /* margin: 30px; */
+    /* height: 80vh; */
+}
+
+.Cart-Item {
+    border: 1px rebeccapurple;
+    margin: 30px;
+}
+
+.Cart-Modo {
+    /* border: 1px solid red; */
+    margin: 30px;
+}
+
+.Cart-Boleto {
+    /* border: 1px solid black; */
+    margin: 30px;
+    padding: 10px;
+}
+
+.Cart-Credit {
+    /* border: 1px solid black; */
+    margin: 30px;
+    padding: 10px;
+}
+
+.Cart-Price {
+    /* border: 1px solid black; */
+    margin: 30px;
+    padding: 10px;
+}
+
+.Cart-Button {
+    /* border: 1px solid black; */
+    margin: 30px;
+    padding: 10px;
+}
+
+.LoginCss{
+    margin: 30px;
+}
