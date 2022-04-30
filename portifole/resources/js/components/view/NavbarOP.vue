@@ -26,31 +26,45 @@
         </div>
     </div>
 </nav>
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-    <div class="offcanvas-header">
-        <h5 id="offcanvasRightLabel">ID</h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="LoginCss">
-        <h5>Login</h5>
-        <br>
-        <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
+<hr>
+<div v-if="cont === 0">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">ID</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
-        </div>
-        <br>
-        <div class="card">
-            <input type="submit" class="btn btn-outline-dark" value="login" @click="login()">
-        </div>
-        <hr>
-        <div>
-            <div class="card">
-                <input type="submit" class="btn btn-outline-dark" value="Criar Conta" @click="conta()">
+        <div class="LoginCss">
+            <h5>Login</h5>
+            <br>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" name='email' placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
             </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" name='senha' placeholder="Password">
+                <label for="floatingPassword">Password</label>
+            </div>
+            <br>
+            <div class="card">
+                <input type="submit" class="btn btn-outline-dark" value="login" @click="login()">
+            </div>
+            <hr>
+            <div>
+                <div class="card">
+                    <a href="registrar" class="btn btn-outline-dark">Criar Conta</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div v-if="cont === 1">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">ID</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="LoginCss">
+            <h1>oi</h1>
         </div>
     </div>
 </div>
@@ -59,12 +73,14 @@
 <script>
 export default {
     name: "NavbarOP",
+    data() {
+        return {
+            cont: 0
+        }
+    },
     methods: {
-        login(){
-            document.getElementById('form').action = "Login"
-        },
-        conta(){
-            document.getElementById('form').action = "Registrar"
+        login() {
+            document.getElementById('form').action = "login"
         }
     }
 };

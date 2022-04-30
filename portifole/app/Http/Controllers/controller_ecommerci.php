@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\model_produtos;
+use App\Models\model_crud;
 use Illuminate\Support\Facades\Http;
 
 class controller_ecommerci extends Controller
@@ -153,5 +154,46 @@ class controller_ecommerci extends Controller
         $url = "https://ws.sandbox.pagseguro.uol.com.br/v2/transactions?email=esdrassousa76@gmail.com&token=13ACCD9BA759496B98B87DD7AD13DBD3";
         $id = Http::asForm()->post($url, $array);
         return $json = json_encode(simplexml_load_string($id));
+    }
+    function registrar_cadastrar(Request $req)
+    {
+        $model = new model_crud;
+        $model->nome = $req->nome;
+        $model->cpf = $req->cpf;
+        $model->ddd = $req->ddd;
+        $model->telefone = $req->telefone;
+        $model->email = $req->email;
+        $model->enderecoNome = $req->enderecoNome;
+        $model->enderecoNumero = $req->enderecoNumero;
+        $model->complemento = $req->complemento;
+        $model->bairro = $req->bairro;
+        $model->cep = $req->cep;
+        $model->cidade = $req->cidade;
+        $model->estado = $req->estado;
+        $model->pais = $req->pais;
+        $model->dataNascimento = $req->dataNascimento;
+        $model->areaCode = $req->areaCode;
+        $model->save();
+        return redirect()->route('index');
+    }
+    function login(Request $req)
+    {
+        return $req;
+    }
+
+    function session()
+    {
+        // add
+        // echo session(['key' => 0]);
+        // echo session()->put('status', 1);
+
+        // get
+        // echo session()->get('status');
+
+        // del
+        // echo session()->pull('key');
+
+        // return 
+        // return session()->all();
     }
 }

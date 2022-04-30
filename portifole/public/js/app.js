@@ -23173,12 +23173,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "NavbarOP",
+  data: function data() {
+    return {
+      cont: 0
+    };
+  },
   methods: {
     login: function login() {
-      document.getElementById('form').action = "Login";
-    },
-    conta: function conta() {
-      document.getElementById('form').action = "Registrar";
+      document.getElementById('form').action = "login";
     }
   }
 });
@@ -23729,14 +23731,21 @@ var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_12 = {
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", null, null, -1
+/* HOISTED */
+);
+
+var _hoisted_13 = {
+  key: 0
+};
+var _hoisted_14 = {
   "class": "offcanvas offcanvas-end",
   tabindex: "-1",
   id: "offcanvasRight",
   "aria-labelledby": "offcanvasRightLabel"
 };
 
-var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "offcanvas-header"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", {
   id: "offcanvasRightLabel"
@@ -23749,23 +23758,36 @@ var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_14 = {
+var _hoisted_16 = {
   "class": "LoginCss"
 };
 
-var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<h5>Login</h5><br><div class=\"form-floating mb-3\"><input type=\"email\" class=\"form-control\" id=\"floatingInput\" placeholder=\"name@example.com\"><label for=\"floatingInput\">Email address</label></div><div class=\"form-floating\"><input type=\"password\" class=\"form-control\" id=\"floatingPassword\" placeholder=\"Password\"><label for=\"floatingPassword\">Password</label></div><br>", 5);
-
-var _hoisted_20 = {
-  "class": "card"
-};
-
-var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", null, null, -1
-/* HOISTED */
-);
+var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<h5>Login</h5><br><div class=\"form-floating mb-3\"><input type=\"email\" class=\"form-control\" id=\"floatingInput\" name=\"email\" placeholder=\"name@example.com\"><label for=\"floatingInput\">Email address</label></div><div class=\"form-floating\"><input type=\"password\" class=\"form-control\" id=\"floatingPassword\" name=\"senha\" placeholder=\"Password\"><label for=\"floatingPassword\">Password</label></div><br>", 5);
 
 var _hoisted_22 = {
   "class": "card"
 };
+
+var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", null, null, -1
+/* HOISTED */
+);
+
+var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "card"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: "registrar",
+  "class": "btn btn-outline-dark"
+}, "Criar Conta")])], -1
+/* HOISTED */
+);
+
+var _hoisted_25 = {
+  key: 1
+};
+
+var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"offcanvas offcanvas-end\" tabindex=\"-1\" id=\"offcanvasRight\" aria-labelledby=\"offcanvasRightLabel\"><div class=\"offcanvas-header\"><h5 id=\"offcanvasRightLabel\">ID</h5><button type=\"button\" class=\"btn-close text-reset\" data-bs-dismiss=\"offcanvas\" aria-label=\"Close\"></button></div><div class=\"LoginCss\"><h1>oi</h1></div></div>", 1);
+
+var _hoisted_27 = [_hoisted_26];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
 
@@ -23800,21 +23822,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  })]), _hoisted_11]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [_hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [_hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  })]), _hoisted_11]), _hoisted_12, $data.cont === 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [_hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [_hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "submit",
     "class": "btn btn-outline-dark",
     value: "login",
     onClick: _cache[0] || (_cache[0] = function ($event) {
       return $options.login();
     })
-  })]), _hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    type: "submit",
-    "class": "btn btn-outline-dark",
-    value: "Criar Conta",
-    onClick: _cache[1] || (_cache[1] = function ($event) {
-      return $options.conta();
-    })
-  })])])])])], 64
+  })]), _hoisted_23, _hoisted_24])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.cont === 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_25, _hoisted_27)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)], 64
   /* STABLE_FRAGMENT */
   );
 }

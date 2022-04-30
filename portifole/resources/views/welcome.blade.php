@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <form id='form' action="" method="post" enctype="multipart/form-data">
+    <form id='form' action="#" method="post" enctype="multipart/form-data">
         @csrf
         @method('POST')
         <div id="app"></div>
