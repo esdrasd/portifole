@@ -23,6 +23,7 @@ class model_crud extends Model
         'estado',
         'pais',
         'dataNascimento',
-        'areaCode'
+        'areaCode',
+        'senha',
     ];
 }

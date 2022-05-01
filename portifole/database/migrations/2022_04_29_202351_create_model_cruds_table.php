@@ -30,6 +30,7 @@ return new class extends Migration
             $table->string('pais'); //shippingAddressCountry && billingAddressCountry
             $table->string('dataNascimento'); //creditCardHolderBirthDate
             $table->string('areaCode'); //creditCardHolderAreaCode
+            $table->string('senha'); //creditCardHolderAreaCode
             $table->timestamps();
         });
     }

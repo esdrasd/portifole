@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\model_produtos;
 use App\Models\model_crud;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 
 class controller_ecommerci extends Controller
 {
@@ -98,7 +100,7 @@ class controller_ecommerci extends Controller
         $config['token'] = "13ACCD9BA759496B98B87DD7AD13DBD3";
         $config['paymentMode'] = 'default';
         $config['paymentMethod'] = 'creditCard';
-        $config['receiverEmail'] = 'esdrassousa76@gmail.com';
+        $config['receiverEmail'] = 'esdrassousa76@gmail.com'; // vendendor recebe email
         $config['currency'] = 'BRL';
         $config['notificationURL'] = 'https://sualoja.com.br/notifica.html';
         $config['reference'] = 'REF1234';
@@ -117,7 +119,7 @@ class controller_ecommerci extends Controller
         $comprador['senderCPF'] = "72962940005";
         $comprador['senderAreaCode'] = "11";
         $comprador['senderPhone'] = "56273440";
-        $comprador['senderEmail'] = "comprador@uol.com.br";
+        $comprador['senderEmail'] = "esd@esd"; //cliente
 
         $shipping['shippingAddressRequired'] = "true";
         $shipping['shippingAddressStreet'] = "Av. Brig. Faria Lima";
@@ -173,27 +175,51 @@ class controller_ecommerci extends Controller
         $model->pais = $req->pais;
         $model->dataNascimento = $req->dataNascimento;
         $model->areaCode = $req->areaCode;
+        $model->senha = $pass = Hash::make($req->senha);
         $model->save();
         return redirect()->route('index');
     }
     function login(Request $req)
     {
-        return $req;
+        $user = DB::table('model_cruds')->where('email', $req->email)->first();
+        if (Hash::check($req->senha, $user->senha)) {
+            session(['key' => 1, 'nome' => $user->nome]);
+            return redirect()->route("index");
+        }
+        return redirect()->route("index");
     }
-
-    function session()
+    function login_sair(){
+        session()->flush();
+        session(['key' => 0, 'nome' => ""]);
+        return redirect()->route("index");
+    }
+    function session_hash()
     {
-        // add
+
+        // $user = DB::table('model_cruds')->where('email', 'comprador@uol.com.br')->first();
+        // return $user;
+
+        // session add
         // echo session(['key' => 0]);
         // echo session()->put('status', 1);
 
-        // get
+        // session get
         // echo session()->get('status');
 
-        // del
-        // echo session()->pull('key');
+        // session del
+        // echo session()->pull('');
+        // echo session()->flush();
 
-        // return 
-        // return session()->all();
+        // session return 
+        return session()->all();
+
+
+        // $y = 'oii'; $x = 'oi';
+        // $pass = Hash::make($x);
+        // if (Hash::check($y, $pass)) {
+        //     return "true";
+        // } else {
+        //     return "false";
+        // }
     }
 }

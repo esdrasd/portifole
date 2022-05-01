@@ -65,12 +65,13 @@ body {
 }
 
 /* center */
-.Cart-Ordem,.Cart-Item{
+.Cart-Ordem,
+.Cart-Item {
     /* border: 1px solid cadetblue; */
     justify-content: center;
     align-items: center;
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
 }
 
 /* center */
@@ -79,7 +80,7 @@ body {
     height: 80vh;
 }
 
-.Cart-Card {    
+.Cart-Card {
     /* border: 1px solid blue; */
     /* margin: 30px; */
     /* height: 80vh; */
@@ -119,6 +120,59 @@ body {
     padding: 10px;
 }
 
-.LoginCss{
+.LoginCss {
     margin: 30px;
+}
+
+.registrar_css {
+    height: 90vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.registrar_center {
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+}
+
+.registrar_input {
+    padding: 20px;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.registrar_titulo,
+.registrar_input,
+.registrar_button {
+    margin: 30px;
+}
+
+.add_base {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: 80vh;
+    width: 100%;
+}
+
+.add_center {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: 50%;
+    width: 100%;
+}
+
+.add_item {
+    height: 100%;
+    width: 50%;
+    padding: 30px;
 }

@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import NavbarOP from './view/NavbarOP.vue'
+import NavbarOP from "./view/NavbarOP.vue";
 export default {
   name: "App",
   components: {
