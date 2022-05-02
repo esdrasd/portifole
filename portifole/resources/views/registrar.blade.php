@@ -10,13 +10,13 @@
 </head>
 
 <body>
-    <form action="{{route('registrar_cadastrar')}}" method="post">
+    <!-- <form id='form' action="{{route('registrar_cadastrar')}}" method="post"> -->
+    <form id='form' action="#" method="post">
         @csrf
         @method('POST')
         <div id="app2"></div>
-<!--         
-
-        <input class="border border-dark" type="text" name='nome' placeholder="nome" value="Jose Comprador">
+        
+        <!-- <input class="border border-dark" type="text" name='nome' placeholder="nome" value="Jose Comprador">
         <input class="border border-dark" type="text" name='senha' placeholder="senha" value="12345-senha">
         <input class="border border-dark" type="text" name='cpf' placeholder="cpf" value="72962940005">
         <input class="border border-dark" type="text" name='ddd' placeholder="ddd" value="11">
@@ -32,9 +32,8 @@
         <input class="border border-dark" type="text" name='pais' placeholder="pais" value="BRA">
         <input class="border border-dark" type="date" name='dataNascimento' placeholder="dataNascimento" value="">
         <input class="border border-dark" type="text" name='areaCode' placeholder="areaCode" value="11">
-        <input class="btn btn-outline-dark" type="submit" value="save">
+        <input class="btn btn-outline-dark" type="submit" value="save"> -->
 
-         -->
     </form>
     <script src="{{asset('./js/app.js')}}"></script>
 </body>
