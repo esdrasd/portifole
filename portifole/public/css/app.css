@@ -65,61 +65,47 @@ body {
 }
 
 /* center */
-.Cart-Ordem,
+/* .Cart-Ordem,
 .Cart-Item {
-    /* border: 1px solid cadetblue; */
     justify-content: center;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-}
+} */
 
 /* center */
-.Cart-Ordem {
+/* .Cart-Ordem {
     width: 100%;
-    height: 80vh;
-}
-
-/*  
-.Cart-Card {
-    border: 1px solid blue;
-    margin: 30px;
     height: 80vh;
 } */
 
-.Cart-Item {
-    /* border: 1px rebeccapurple; */
+/* .Cart-Item {
     margin: 30px;
-}
+} */
 
-.Cart-Modo {
-    /* border: 1px solid red; */
+/* .Cart-Modo {
     margin: 30px;
-}
+} */
 
-.Cart-Boleto {
-    /* border: 1px solid black; */
+/* .Cart-Boleto {
     margin: 30px;
     padding: 10px;
-}
+} */
 
-.Cart-Credit {
-    /* border: 1px solid black; */
+/* .Cart-Credit {
     margin: 30px;
     padding: 10px;
-}
+} */
 
-.Cart-Price {
-    /* border: 1px solid black; */
+/* .Cart-Price {
     margin: 30px;
     padding: 10px;
-}
+} */
 
-.Cart-Button {
-    /* border: 1px solid black; */
+/* .Cart-Button {
     margin: 30px;
     padding: 10px;
-}
+} */
 
 .LoginCss {
     margin: 30px;
