@@ -156,25 +156,29 @@ body {
     padding: 30px;
 }
 
-.regisItem,.regisCenter {
+.regisItem,
+.regisCenter {
     justify-content: center;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
 }
-.regisCenter{
+
+.regisCenter {
     height: 90vh;
     width: 100%;
 }
+
 .regisItem {
     width: 100%;
 }
 
-.regisBase{
+.regisBase {
     width: 50%;
     padding: 30px;
 }
 
-.regisTitulo,.regisButton{
+.regisTitulo,
+.regisButton {
     margin: 30px;
 }

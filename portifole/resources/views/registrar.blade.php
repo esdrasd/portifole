@@ -10,12 +10,16 @@
 </head>
 
 <body>
-    <!-- <form id='form' action="{{route('registrar_cadastrar')}}" method="post"> -->
     <form id='form' action="#" method="post">
         @csrf
         @method('POST')
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{route('index')}}">Home</a>
+            </div>
+        </nav>
+        <hr>
         <div id="app2"></div>
-        
         <!-- <input class="border border-dark" type="text" name='nome' placeholder="nome" value="Jose Comprador">
         <input class="border border-dark" type="text" name='senha' placeholder="senha" value="12345-senha">
         <input class="border border-dark" type="text" name='cpf' placeholder="cpf" value="72962940005">
@@ -33,7 +37,6 @@
         <input class="border border-dark" type="date" name='dataNascimento' placeholder="dataNascimento" value="">
         <input class="border border-dark" type="text" name='areaCode' placeholder="areaCode" value="11">
         <input class="btn btn-outline-dark" type="submit" value="save"> -->
-
     </form>
     <script src="{{asset('./js/app.js')}}"></script>
 </body>
