@@ -1,16 +1,27 @@
 <template>
+<div v-for="(i, key) in dados" :key="i">
+    <p><img :src="'storage/' + i.img" style="height: 200px; width: 200px" /></p>
+    <h1>{{ i.nome }}</h1>
+    <h1>{{ i.price }}</h1>
+    <input type="button" value="delete" @click="del(key)" />
+    <hr />
+</div>
 <h1>price:</h1>
 <input type="hidden" id="produto" name="produto" />
 <input type="text" id="price" name="price" :value="price" />
-<br>
-<input type="radio" id="boleto" value="boleto" v-model="modo" />
+<p></p>
 <label for="boleto"><h1>Boleto</h1></label>
-<p><!-- token --><input type="hidden" id="id_boleto" name="id_boleto" /></p>
+<input type="radio" id="boleto" value="boleto" v-model="modo" />
+<input type="hidden" id="id_boleto" name="id_boleto" />
 <input type="hidden" id="id_comprador_boleto" name="id_comprador_boleto" />
-<input type="radio" id="creditcard" value="creditcard" v-model="modo" />
+<p></p>
 <label for="creditcard"><h1>creditcard</h1></label>
+<input type="radio" id="creditcard" value="creditcard" v-model="modo" />
+<p></p>
 <input type="hidden" id="id_creditCard" name="id_creditCard" />
+<p></p>
 <input type="hidden" id="id_comprador_creditCard" name="id_comprador_creditCard" />
+<p></p>
 <input type="hidden" id="id_card" name="id_card" />
 <p></p>
 <input type="text" id="n_card" name="n_card" placeholder="n_card" value="4111111111111111" />
@@ -20,6 +31,7 @@
 <input type="text" id='mes' name='mes' placeholder="mes" value="12">
 <p></p>
 <input type="text" id='ano' name='ano' placeholder="ano" value="2026">
+<p></p>
 <div id="n_bandeira"></div>
 <div id="bandeira"></div>
 <p></p>
@@ -27,19 +39,15 @@
 <option>parcelas</option>
 </select>
 <p></p>
-<input type="text" id="v_parcela" name="v_parcela" placeholder="valor da parcela" />
-<input type="text" id="t_parcela" name="t_parcela" placeholder="total da parcela" />
-<input type="submit" @click="pagamento()" value="pagamento" />
+Valor da Parcelas R$: <div id="v_parcela" name="v_parcela"></div>
+Total da Parcelas R$: <div id="t_parcela" name="t_parcela"></div>
+<p></p>
+<p><input type="submit" @click="pagamento()" value="pagamento" /></p>
+<p></p>
 <div id="meios_pagamentos"></div>
 <hr />
-<div v-for="(i, key) in dados" :key="i">
-    <h1>{{ i.nome }}</h1>
-    <h1>{{ i.price }}</h1>
-    <p><img :src="'storage/' + i.img" style="height: 200px; width: 200px" /></p>
-    <input type="button" value="delete" @click="del(key)" />
-    <hr />
-</div>
 </template>
+
 
 <script>
 export default {
@@ -90,6 +98,3 @@ export default {
     },
 };
 </script>
-
-<style>
-</style>
