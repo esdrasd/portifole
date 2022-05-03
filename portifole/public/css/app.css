@@ -125,4 +125,50 @@ body {
 .regisButton {
     margin: 30px;
 }
-...
+
+.cartbase,
+.cartitem {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.cartbase {
+    flex-wrap: wrap;
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 90vh;
+}
+
+.cartprod {
+    /* border: 1px solid red; */
+    width: 30%;
+    height: 100%;
+    overflow: auto;
+    margin-right: 50px;
+}
+
+.cartitem {
+    /* border: 1px solid green; */
+    width: 90%;
+    height: 300px;
+    margin: 30px;
+}
+
+.cartitemstatus {
+    border: 1px solid darkgoldenrod;
+    display: flex;
+    padding: 30px;
+    width: 100%;
+}
+
+.cartvalores {
+    /* border: 1px solid blue; */
+    width: 30%;
+    height: 100%;
+}
+
+.cartstatusbutton{
+    display: flex;
+    width: 100%;
+}

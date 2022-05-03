@@ -1,46 +1,76 @@
 <template>
-
+<div class="cartbase">
+<div class="cartprod card">
 <div v-for="(i, key) in dados" :key="i">
+<div class="cartitem">
+
+<div class="cartgroup">
+<div class="cartstatusbutton">
 <img :src="'storage/' + i.img" style="height: 200px; width: 200px" />
+<div class="cartitemstatus card">
 <h5 class="card-title">Produto: {{ i.nome }}</h5>
 <h5 class="card-title">R$: {{ i.price }}</h5>
+</div>
+</div>
+<div class="cartbutton card">
 <input class="btn btn-outline-dark" type="button" value="delete" @click="del(key)" />
 </div>
+</div>
 
+</div>
+</div>
+</div>
+
+<div class="cartvalores card">
+<div class="card">
 <h1>Total dos Price:</h1>
 <input type="hidden" id="produto" name="produto" />
 <input type="hidden" id="price" name="price" :value="price" />
 <div id="price" name="price">R$: {{price}}</div>
-<label for="boleto">
-<h1>Boleto</h1>
-</label>
+</div> 
+<div class="card">
+<label for="boleto"><h1>Boleto</h1></label>
 <input type="radio" id="boleto" value="boleto" v-model="modo" />
 <p><input type="hidden" id="id_boleto" name="id_boleto" /></p>
 <input type="hidden" id="id_comprador_boleto" name="id_comprador_boleto" />
-
-<label for="creditcard">
-<h1>Parcelamento</h1>Cartao de Credito
-</label>
+</div>
+<div class="card">
+<label for="creditcard"><h1>Cartao de Credito</h1></label>
 <input type="radio" id="creditcard" value="creditcard" v-model="modo" />
 <input type="hidden" id="id_creditCard" name="id_creditCard" />
 <input type="hidden" id="id_comprador_creditCard" name="id_comprador_creditCard" />
 <input type="hidden" id="id_card" name="id_card" />
+<br>
 <input class="border" type="text" id="n_card" name="n_card" placeholder="n_card" value="4111111111111111" />
+<br>
 <input class="border" type="text" id='cvv' name='cvv' placeholder="cvv" value="013">
+<br>
 <input class="border" type="text" id='mes' name='mes' placeholder="mes" value="12">
+<br>
 <input class="border" type="text" id='ano' name='ano' placeholder="ano" value="2026">
-<h1>
-<div id="n_bandeira"></div>
-</h1>
+</div>
+<br>
+<div class="card">
+<h1><div id="n_bandeira"></div></h1>
 <div id="bandeira"></div>
+</div>
+<br>
+<div class="card">
 <select id="parcelas" name="parcelas" class="border">
 <option>parcelas</option>
 </select>
+</div>
+<br>
 Valor da Parcelas R$: <div id="v_parcela" name="v_parcela"></div>
-Total da Parcelas R$:
-<div id="t_parcela" name="t_parcela"></div>
+Total da Parcelas R$: <div id="t_parcela" name="t_parcela"></div>
+<br>
+<div class="card">
 <div id="meios_pagamentos"></div>
+<br>
 <input class="btn btn-outline-dark" type="submit" @click="pagamento()" value="pagamento" />
+</div>
+</div>
+</div>
 </template>
 
 <script>
