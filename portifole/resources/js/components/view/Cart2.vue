@@ -8,7 +8,7 @@
 </div>
 <h1>price:</h1>
 <input type="hidden" id="produto" name="produto" />
-<input type="text" id="price" name="price" :value="price" />
+<div id="price_div"></div>
 <p></p>
 <label for="boleto"><h1>Boleto</h1></label>
 <input type="radio" id="boleto" value="boleto" v-model="modo" />
@@ -78,10 +78,12 @@ export default {
             var price = JSON.parse(i.price);
             this.price += price;
         }
+            document.getElementById('price_div').innerHTML = this.price;
     },
     methods: {
         del(key) {
             this.price -= JSON.parse(this.dados[key].price);
+            document.getElementById('price_div').innerHTML = this.price;
             this.dados.splice(key, 1);
             var x = JSON.stringify(this.dados);
             sessionStorage.setItem("cart", x);

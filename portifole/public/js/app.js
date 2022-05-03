@@ -23050,10 +23050,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     } finally {
       _iterator2.f();
     }
+
+    document.getElementById('price_div').innerHTML = this.price;
   },
   methods: {
     del: function del(key) {
       this.price -= JSON.parse(this.dados[key].price);
+      document.getElementById('price_div').innerHTML = this.price;
       this.dados.splice(key, 1);
       var x = JSON.stringify(this.dados);
       sessionStorage.setItem("cart", x);
@@ -23352,7 +23355,11 @@ var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 /* HOISTED */
 );
 
-var _hoisted_6 = ["value"];
+var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  id: "price_div"
+}, null, -1
+/* HOISTED */
+);
 
 var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, null, -1
 /* HOISTED */
@@ -23433,14 +23440,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     , _hoisted_2), _hoisted_3]);
   }), 128
   /* KEYED_FRAGMENT */
-  )), _hoisted_4, _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    type: "text",
-    id: "price",
-    name: "price",
-    value: $data.price
-  }, null, 8
-  /* PROPS */
-  , _hoisted_6), _hoisted_7, _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  )), _hoisted_4, _hoisted_5, _hoisted_6, _hoisted_7, _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "radio",
     id: "boleto",
     value: "boleto",
