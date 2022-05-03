@@ -23050,13 +23050,10 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     } finally {
       _iterator2.f();
     }
-
-    document.getElementById('price_div').innerHTML = this.price;
   },
   methods: {
     del: function del(key) {
       this.price -= JSON.parse(this.dados[key].price);
-      document.getElementById('price_div').innerHTML = this.price;
       this.dados.splice(key, 1);
       var x = JSON.stringify(this.dados);
       sessionStorage.setItem("cart", x);
@@ -23337,17 +23334,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = ["src"];
-var _hoisted_2 = ["onClick"];
+var _hoisted_2 = {
+  "class": "card-title"
+};
+var _hoisted_3 = {
+  "class": "card-title"
+};
+var _hoisted_4 = ["onClick"];
 
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", null, null, -1
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", null, "Total dos Price:", -1
 /* HOISTED */
 );
 
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", null, "price:", -1
-/* HOISTED */
-);
-
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
   type: "hidden",
   id: "produto",
   name: "produto"
@@ -23355,31 +23354,27 @@ var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 /* HOISTED */
 );
 
-var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  id: "price_div"
-}, null, -1
-/* HOISTED */
-);
+var _hoisted_7 = ["value"];
+var _hoisted_8 = {
+  id: "price",
+  name: "price"
+};
 
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, null, -1
-/* HOISTED */
-);
-
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": "boleto"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", null, "Boleto")], -1
 /* HOISTED */
 );
 
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
   type: "hidden",
   id: "id_boleto",
   name: "id_boleto"
-}, null, -1
+})], -1
 /* HOISTED */
 );
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
   type: "hidden",
   id: "id_comprador_boleto",
   name: "id_comprador_boleto"
@@ -23387,37 +23382,19 @@ var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, null, -1
-/* HOISTED */
-);
-
 var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": "creditcard"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", null, "creditcard")], -1
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", null, "Parcelamento"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Cartao de Credito ")], -1
 /* HOISTED */
 );
 
-var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<p></p><input type=\"hidden\" id=\"id_creditCard\" name=\"id_creditCard\"><p></p><input type=\"hidden\" id=\"id_comprador_creditCard\" name=\"id_comprador_creditCard\"><p></p><input type=\"hidden\" id=\"id_card\" name=\"id_card\"><p></p><input type=\"text\" id=\"n_card\" name=\"n_card\" placeholder=\"n_card\" value=\"4111111111111111\"><p></p><input type=\"text\" id=\"cvv\" name=\"cvv\" placeholder=\"cvv\" value=\"013\"><p></p><input type=\"text\" id=\"mes\" name=\"mes\" placeholder=\"mes\" value=\"12\"><p></p><input type=\"text\" id=\"ano\" name=\"ano\" placeholder=\"ano\" value=\"2026\"><p></p><div id=\"n_bandeira\"></div><div id=\"bandeira\"></div><p></p><select id=\"parcelas\" name=\"parcelas\"><option>parcelas</option></select><p></p> Valor da Parcelas R$: <div id=\"v_parcela\" name=\"v_parcela\"></div> Total da Parcelas R$: <div id=\"t_parcela\" name=\"t_parcela\"></div><p></p>", 25);
-
-var _hoisted_38 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, null, -1
-/* HOISTED */
-);
-
-var _hoisted_39 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  id: "meios_pagamentos"
-}, null, -1
-/* HOISTED */
-);
-
-var _hoisted_40 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", null, null, -1
-/* HOISTED */
-);
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<input type=\"hidden\" id=\"id_creditCard\" name=\"id_creditCard\"><input type=\"hidden\" id=\"id_comprador_creditCard\" name=\"id_comprador_creditCard\"><input type=\"hidden\" id=\"id_card\" name=\"id_card\"><input class=\"border\" type=\"text\" id=\"n_card\" name=\"n_card\" placeholder=\"n_card\" value=\"4111111111111111\"><input class=\"border\" type=\"text\" id=\"cvv\" name=\"cvv\" placeholder=\"cvv\" value=\"013\"><input class=\"border\" type=\"text\" id=\"mes\" name=\"mes\" placeholder=\"mes\" value=\"12\"><input class=\"border\" type=\"text\" id=\"ano\" name=\"ano\" placeholder=\"ano\" value=\"2026\"><h1><div id=\"n_bandeira\"></div></h1><div id=\"bandeira\"></div><select id=\"parcelas\" name=\"parcelas\" class=\"border\"><option>parcelas</option></select> Valor da Parcelas R$: <div id=\"v_parcela\" name=\"v_parcela\"></div> Total da Parcelas R$: <div id=\"t_parcela\" name=\"t_parcela\"></div><div id=\"meios_pagamentos\"></div>", 15);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.dados, function (i, key) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       key: i
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
       src: 'storage/' + i.img,
       style: {
         "height": "200px",
@@ -23425,11 +23402,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       }
     }, null, 8
     /* PROPS */
-    , _hoisted_1)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(i.nome), 1
+    , _hoisted_1), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", _hoisted_2, "Produto: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(i.nome), 1
     /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(i.price), 1
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", _hoisted_3, "R$: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(i.price), 1
     /* TEXT */
     ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+      "class": "btn btn-outline-dark",
       type: "button",
       value: "delete",
       onClick: function onClick($event) {
@@ -23437,10 +23415,19 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       }
     }, null, 8
     /* PROPS */
-    , _hoisted_2), _hoisted_3]);
+    , _hoisted_4)]);
   }), 128
   /* KEYED_FRAGMENT */
-  )), _hoisted_4, _hoisted_5, _hoisted_6, _hoisted_7, _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  )), _hoisted_5, _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "hidden",
+    id: "price",
+    name: "price",
+    value: $data.price
+  }, null, 8
+  /* PROPS */
+  , _hoisted_7), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, "R$: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.price), 1
+  /* TEXT */
+  ), _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "radio",
     id: "boleto",
     value: "boleto",
@@ -23449,7 +23436,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelRadio, $data.modo]]), _hoisted_9, _hoisted_10, _hoisted_11, _hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelRadio, $data.modo]]), _hoisted_10, _hoisted_11, _hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "radio",
     id: "creditcard",
     value: "creditcard",
@@ -23458,13 +23445,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelRadio, $data.modo]]), _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelRadio, $data.modo]]), _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "class": "btn btn-outline-dark",
     type: "submit",
     onClick: _cache[2] || (_cache[2] = function ($event) {
       return $options.pagamento();
     }),
     value: "pagamento"
-  })]), _hoisted_38, _hoisted_39, _hoisted_40], 64
+  })], 64
   /* STABLE_FRAGMENT */
   );
 }

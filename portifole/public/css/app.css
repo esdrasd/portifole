@@ -64,49 +64,6 @@ body {
     margin: 10px;
 }
 
-/* center */
-/* .Cart-Ordem,
-.Cart-Item {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-} */
-
-/* center */
-/* .Cart-Ordem {
-    width: 100%;
-    height: 80vh;
-} */
-
-/* .Cart-Item {
-    margin: 30px;
-} */
-
-/* .Cart-Modo {
-    margin: 30px;
-} */
-
-/* .Cart-Boleto {
-    margin: 30px;
-    padding: 10px;
-} */
-
-/* .Cart-Credit {
-    margin: 30px;
-    padding: 10px;
-} */
-
-/* .Cart-Price {
-    margin: 30px;
-    padding: 10px;
-} */
-
-/* .Cart-Button {
-    margin: 30px;
-    padding: 10px;
-} */
-
 .LoginCss {
     margin: 30px;
 }
