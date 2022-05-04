@@ -1,19 +1,35 @@
 <template>
+<div class="comprarCenter">
 <div v-for="img in dados" :key="img">
-    <div v-if="img.id == id">
-        <div v-for="(fotos, ii) in JSON.parse(img.img)" :key="fotos">
-            <div v-if="ii == corx">
-                <img :src="'storage/' + fotos" style="height: 200px; width: 200px" />
-            </div>
-        </div>
-        <h5 class="card-title">Produto: {{ img.nome }}</h5>
-        <h5 class="card-title">Price: R$ {{ img.price }}</h5>
-        <h5 class="card-title">Op: </h5>
-        <div v-for="(prod, ii) in JSON.parse(img.img)" :key="prod">
-            <input type="button" @click="cor(ii)" :value="'cor ' + ii" />
-        </div>
-        <input type="button" @click="add_cart(img.id, img.nome, img.price, JSON.parse(img.img)[corx])" value="add carrinho" />
-    </div>
+<div v-if="img.id == id">
+
+<div class="comprarCard">
+<div class="comprarImg card">
+<div v-for="(fotos, ii) in JSON.parse(img.img)" :key="fotos">
+<div v-if="ii == corx">
+<img :src="'storage/' + fotos" style="height: 200px; width: 200px" />
+</div>
+</div>
+</div>
+
+<div class="comprarStatus card">
+<h5 class="card-title">Produto: {{ img.nome }}</h5>
+<h5 class="card-title">Price: R$ {{ img.price }}</h5>
+</div>
+</div>
+
+<h5 class="card-title">Op: </h5>
+<div class="comprarInput">
+<div v-for="(prod, ii) in JSON.parse(img.img)" :key="prod">
+<input class="btn btn-outline-dark" type="button" @click="cor(ii)" :value="'cor ' + ii" />
+</div>
+</div>
+
+<div class=" card">
+<input class="btn btn-outline-dark" type="button" @click="add_cart(img.id, img.nome, img.price, JSON.parse(img.img)[corx])" value="add carrinho" />
+</div>
+</div>
+</div>
 </div>
 </template>
 

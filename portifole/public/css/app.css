@@ -29,41 +29,6 @@ body {
     margin: 40px;
 }
 
-/* center card */
-.ComprarCss {
-    /* border: 1px solid black; */
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 80vh;
-    display: flex;
-}
-
-/*center price e button e text*/
-.ComprarTamanho,
-.ComprarTamanhoitem {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    display: flex;
-}
-
-.ComprarTamanho {
-    /* border: 1px solid red; */
-    padding: 100px;
-}
-
-.ComprarTamanhoitem {
-    /* border: 1px solid cadetblue; */
-    padding: 30px;
-}
-
-.ComprarOrd {
-    /* border: 1px solid blue; */
-    margin: 10px;
-}
-
 .LoginCss {
     margin: 30px;
 }
@@ -168,8 +133,28 @@ body {
     height: 100%;
 }
 
-.cartstatusbutton{
+.cartstatusbutton {
     display: flex;
     width: 100%;
 }
-.
+
+.comprarCenter {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 50vh;
+}
+.comprarStatus{
+    padding: 30px;
+}
+.comprarCard{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.comprarInput{
+    display: flex;
+    padding: 30px;
+}
