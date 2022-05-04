@@ -16,4 +16,4 @@ route::post('credito', [controller_ecommerci::class, 'credito'])->name('credito'
 route::post('registrar_cadastrar', [controller_ecommerci::class, 'registrar_cadastrar'])->name('registrar_cadastrar');
 route::post('login', [controller_ecommerci::class, 'login'])->name('login');
 
-// route::get('x', [controller_ecommerci::class, 'session_hash']);
+route::get('x', [controller_ecommerci::class, 'session_hash']);
