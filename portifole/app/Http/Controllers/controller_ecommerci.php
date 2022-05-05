@@ -29,6 +29,7 @@ class controller_ecommerci extends Controller
             $img[] = $v->store('fotos', 'public');
         };
         $model = new model_produtos;
+        $model->desc = $req->desc;
         $model->nome = $req->nome;
         $model->price = $req->price;
         $model->img = json_encode($img);

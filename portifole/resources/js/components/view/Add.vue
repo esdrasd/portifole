@@ -3,27 +3,28 @@
     <div class="add_center">
         <div class="add_item card">
             <h5>Add SEUS PRODUTOS</h5>
-
+            <br>
+            <div class="card">
+                <input class="border border-dark" type="text" name="desc" placeholder="nome do produto" />
+            </div>
+            <br>
             <div class="card btn btn-outline-dark">
-                Nome do produto:
+                Categoria:
                 <select name="nome" id="nome">
-                    <option value="avatar">avatar</option>
-                    <option value="check">check</option>
-                    <option value="Xiaomi">Xiaomi</option>
+                    <option>Escolha a Categoria</option>
+                    <option value="celular">celular</option>
+                    <option value="game">game</option>
                 </select>
             </div>
             <br />
-
             <div class="card">
                 <input class="border border-dark" type="text" name="price" placeholder="Price" />
             </div>
             <br />
-
             <div class="card">
                 <input class="btn btn-outline-dark" type="file" id="file" name="img[]" multiple />
             </div>
             <br />
-            
             <div class="card">
                 <input class="btn btn-outline-dark" type="submit" @click="add()" value="enviar" />
             </div>

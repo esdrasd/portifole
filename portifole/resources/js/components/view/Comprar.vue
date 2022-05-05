@@ -13,7 +13,8 @@
 </div>
 
 <div class="comprarStatus card">
-<h5 class="card-title">Produto: {{ img.nome }}</h5>
+<h5 class="card-title">Nome: {{ img.desc }}</h5>
+<h5 class="card-title">Categoria: {{ img.nome }}</h5>
 <h5 class="card-title">Price: R$ {{ img.price }}</h5>
 </div>
 </div>

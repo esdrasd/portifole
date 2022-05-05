@@ -10,6 +10,7 @@
             </router-link>
 
             <div class="card-body">
+                <h5 style="card-title">{{ i.desc }}</h5>
                 <h5 style="card-title">{{ i.nome }}</h5>
                 <h6 style="card-title">R$ {{ i.price }}</h6>
             </div>
