@@ -4,6 +4,7 @@ import { createApp } from 'vue';
 import Api from './components/Api_pagseguro/Api.js';
 import App from './components/App.vue'; // navbar e url
 import Registrar from './components/Registrar.vue';
+import Edit from './components/Edit.vue';
 import Router from './components/router/Router.js'; //Rotas_URL e Paginas
 
 createApp(App)
@@ -16,4 +17,9 @@ createApp(App)
 createApp(Registrar)
     .use(bootstrapCSS)
     .use(bootstrapJS)
-    .mount('#app2');
+    .mount('#Registrar');
+
+createApp(Edit)
+    .use(bootstrapCSS)
+    .use(bootstrapJS)
+    .mount('#Edit');

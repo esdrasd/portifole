@@ -9,6 +9,7 @@ class model_crud extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'id',
         'nome',
         'cpf',
         'ddd',

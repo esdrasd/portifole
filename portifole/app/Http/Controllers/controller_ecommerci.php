@@ -11,6 +11,17 @@ use Illuminate\Support\Facades\DB;
 
 class controller_ecommerci extends Controller
 {
+    function index()
+    {
+        if (!session()->has('key')) {
+            session()->flush();
+            session(['key' => 0, 'nome' => '']);
+            return view('welcome');
+        }
+        if (session()->get('key') == 0 || session()->get('key') == 1) {
+            return view('welcome');
+        }
+    }
     function add(Request $req)
     {
         $x = $req->file('img');
@@ -182,29 +193,107 @@ class controller_ecommerci extends Controller
     function login(Request $req)
     {
         $user = DB::table('model_cruds')->where('email', $req->email)->first();
+
+        if($user == null){
+            return redirect()->route("index");
+        }
+
         if (Hash::check($req->senha, $user->senha)) {
-            session(['key' => 1, 'nome' => $user->nome]);
+            session([
+                'key' => 1,
+                'nome' => $user->nome,
+                'id' => $user->id
+            ]);
             return redirect()->route("index");
         }
         return redirect()->route("index");
     }
-    function login_sair(){
+    function login_sair()
+    {
         session()->flush();
         session(['key' => 0, 'nome' => ""]);
         return redirect()->route("index");
     }
-    function session_hash()
+    function edit_perfil()
+    {
+        $id = session()->get('id');
+        return $model = model_crud::find($id);        
+    }
+    function edit_save(Request $req)
+    {
+        $id = session()->get('id');
+        $model = model_crud::find($id);
+        
+        if(!$req->email == null){
+            $model->email = $req->email;
+        }
+        if(!$req->antigaSenha == null){
+            if(Hash::check($req->antigaSenha, $model->senha)){
+                $model->senha = Hash::make($req->novaSenha);
+            }
+        }
+        if(!$req->nome == null){
+            $model->nome = $req->nome;
+            session()->put('nome', $req->nome);
+        }
+        if(!$req->cpf == null){
+            $model->cpf = $req->cpf;
+        }
+        if(!$req->ddd == null){
+            $model->ddd = $req->ddd;
+        }
+        if(!$req->telefone == null){
+            $model->telefone = $req->telefone;
+        }
+        if(!$req->enderecoNome == null){
+            $model->enderecoNome = $req->enderecoNome;
+        }
+        if(!$req->enderecoNumero == null){
+            $model->enderecoNumero = $req->enderecoNumero;
+        }
+        if(!$req->complemento == null){
+            $model->complemento = $req->complemento;
+        }
+        if(!$req->bairro == null){
+            $model->bairro = $req->bairro;
+        }
+        if(!$req->cep == null){
+            $model->cep = $req->cep;
+        }
+        if(!$req->cidade == null){
+            $model->cidade = $req->cidade;
+        }
+        if(!$req->estado == null){
+            $model->estado = $req->estado;
+        }
+        if(!$req->pais == null){
+            $model->pais = $req->pais;
+        }
+        if(!$req->dataNascimento == null){
+            $model->dataNascimento = $req->dataNascimento;
+        }
+        if(!$req->ddd == null){
+            $model->areaCode = $req->ddd;
+        }
+        $model->save();
+        return redirect()->route('edit');
+    }
+    function session()
+    {
+        return session()->all();
+    }
+
+    function xx()
     {
 
         // $user = DB::table('model_cruds')->where('email', 'comprador@uol.com.br')->first();
         // return $user;
 
         // session add
-        // echo session(['key' => 0]);
-        // echo session()->put('status', 1);
+        // echo session()->put('nome', 'esdras');
 
         // session get
-        // echo session()->get('status');
+        // echo session()->get('key');
 
         // session del
         // echo session()->pull('');
