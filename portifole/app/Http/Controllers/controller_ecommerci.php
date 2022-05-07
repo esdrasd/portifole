@@ -121,7 +121,7 @@ class controller_ecommerci extends Controller
         foreach (json_decode($req->produto) as $i) {
             $key++;
             $prod['itemId' . $key] = $key;
-            $prod['itemDescription' . $key] = $i->nome;
+            $prod['itemDescription' . $key] =$i->desc." / ".$i->nome." / ".$i->img;
             $prod['itemAmount' . $key] = number_format($i->price, 2, '.', '');
             $prod['itemQuantity' . $key] = '1';
         }
@@ -163,11 +163,16 @@ class controller_ecommerci extends Controller
 
         $install['installmentQuantity'] = $req->parcelas;
         $install['installmentValue'] = number_format($req->v_parcela, 2, '.', '');
-
-        $array = $config + $comprador + $prod + $shipping + $credit + $billing + $install;
-        $url = "https://ws.sandbox.pagseguro.uol.com.br/v2/transactions?email=esdrassousa76@gmail.com&token=13ACCD9BA759496B98B87DD7AD13DBD3";
-        $id = Http::asForm()->post($url, $array);
-        return $json = json_encode(simplexml_load_string($id));
+        
+        $x = 01;
+        if($x == 0){
+            return $array = $config + $comprador + $prod + $shipping + $credit + $billing + $install;
+        }else{
+            $array = $config + $comprador + $prod + $shipping + $credit + $billing + $install;
+            $url = "https://ws.sandbox.pagseguro.uol.com.br/v2/transactions?email=esdrassousa76@gmail.com&token=13ACCD9BA759496B98B87DD7AD13DBD3";
+            $id = Http::asForm()->post($url, $array);
+            return $json = json_encode(simplexml_load_string($id));
+        }
     }
     function registrar_cadastrar(Request $req)
     {

@@ -13,6 +13,9 @@
                 <li class="nav-item">
                     <router-link class="nav-link" to="/game">Game</router-link>
                 </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/notebook">Notebook</router-link>
+                </li>
             </ul>
         </div>
     </div>

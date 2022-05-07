@@ -7,7 +7,9 @@
                     <div class="cartstatusbutton">
                         <img :src="'storage/' + i.img" style="height: 200px; width: 200px" />
                         <div class="cartitemstatus card">
+                            <h5 class="card-title">Nome: {{ i.desc }}</h5>
                             <h5 class="card-title">Produto: {{ i.nome }}</h5>
+                            <h5 class="card-title">Quantidade: {{ i.count }}</h5>
                             <h5 class="card-title">R$: {{ i.price }}</h5>
                         </div>
                     </div>

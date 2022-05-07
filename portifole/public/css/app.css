@@ -29,7 +29,127 @@ body {
     margin: 40px;
 }
 
+/* center card */
+.ComprarCss {
+    /* border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+}
+
+/*center price e button e text*/
+.ComprarTamanho,
+.ComprarTamanhoitem {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.ComprarTamanho {
+    /* border: 1px solid red; */
+    padding: 100px;
+}
+
+.ComprarTamanhoitem {
+    /* border: 1px solid cadetblue; */
+    padding: 30px;
+}
+
+.ComprarOrd {
+    /* border: 1px solid blue; */
+    margin: 10px;
+}
+
+/* center */
+.Cart-Ordem,
+.Cart-Item {
+    /* border: 1px solid cadetblue; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* center */
+.Cart-Ordem {
+    width: 100%;
+    height: 80vh;
+}
+
+.Cart-Card {
+    /* border: 1px solid blue; */
+    /* margin: 30px; */
+    /* height: 80vh; */
+}
+
+.Cart-Item {
+    border: 1px rebeccapurple;
+    margin: 30px;
+}
+
+.Cart-Modo {
+    /* border: 1px solid red; */
+    margin: 30px;
+}
+
+.Cart-Boleto {
+    /* border: 1px solid black; */
+    margin: 30px;
+    padding: 10px;
+}
+
+.Cart-Credit {
+    /* border: 1px solid black; */
+    margin: 30px;
+    padding: 10px;
+}
+
+.Cart-Price {
+    /* border: 1px solid black; */
+    margin: 30px;
+    padding: 10px;
+}
+
+.Cart-Button {
+    /* border: 1px solid black; */
+    margin: 30px;
+    padding: 10px;
+}
+
 .LoginCss {
+    margin: 30px;
+}
+
+.registrar_css {
+    height: 90vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.registrar_center {
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+}
+
+.registrar_input {
+    padding: 20px;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.registrar_titulo,
+.registrar_input,
+.registrar_button {
     margin: 30px;
 }
 
@@ -54,107 +174,5 @@ body {
 .add_item {
     height: 100%;
     width: 50%;
-    padding: 30px;
-}
-
-.regisCol1,
-.regisCol2 {
-    border: 1px solid red;
-    margin: 30px;
-    padding: 30px;
-}
-
-.regisItem,
-.regisCenter {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.regisCenter {
-    height: 90vh;
-    width: 100%;
-}
-
-.regisItem {
-    width: 100%;
-}
-
-.regisBase {
-    width: 50%;
-    padding: 30px;
-}
-
-.regisTitulo,
-.regisButton {
-    margin: 30px;
-}
-
-.cartbase,
-.cartitem {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-.cartbase {
-    flex-wrap: wrap;
-    /* border: 1px solid black; */
-    width: 100%;
-    height: 90vh;
-}
-
-.cartprod {
-    /* border: 1px solid red; */
-    width: 30%;
-    height: 100%;
-    overflow: auto;
-    margin-right: 50px;
-}
-
-.cartitem {
-    /* border: 1px solid green; */
-    width: 90%;
-    height: 300px;
-    margin: 30px;
-}
-
-.cartitemstatus {
-    border: 1px solid darkgoldenrod;
-    display: flex;
-    padding: 30px;
-    width: 100%;
-}
-
-.cartvalores {
-    /* border: 1px solid blue; */
-    width: 30%;
-    height: 100%;
-}
-
-.cartstatusbutton {
-    display: flex;
-    width: 100%;
-}
-
-.comprarCenter {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 50vh;
-}
-.comprarStatus{
-    padding: 30px;
-}
-.comprarCard{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-}
-.comprarInput{
-    display: flex;
     padding: 30px;
 }
