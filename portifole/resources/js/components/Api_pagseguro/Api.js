@@ -61,11 +61,9 @@ function bandeira() {
 
 function parcela(nome) {
     PagSeguroDirectPayment.getInstallments({
-
         amount: document.getElementById('price').value,
         maxInstallmentNoInterest: 2,
         brand: nome,
-
         success: function(response) {
             var parcelas = Object.values(response.installments)[0]
             document.getElementById('parcelas').innerHTML = ''
@@ -73,14 +71,15 @@ function parcela(nome) {
             var ii = 1
             for (let i = 0; i < parcelas.length; i++) {
                 document.getElementById('parcelas').innerHTML += "<option value=" + ii + ">" + 'parcelas: ' + parcelas[i].quantity + "</option>"
-                    // console.log(ii);
                 document.getElementById('parcelas').onclick = function() {
                     var qtd = document.getElementById('parcelas').value;
                     var id = JSON.parse(qtd);
                     id -= 1
-                        // console.log(id-=1);
-                    document.getElementById('v_parcela').innerHTML = parcelas[id].installmentAmount;
-                    document.getElementById('t_parcela').innerHTML = parcelas[id].totalAmount;
+                    document.getElementById('v_parcela').value = parcelas[id].installmentAmount;
+                    document.getElementById('t_parcela').value = parcelas[id].totalAmount;
+
+                    document.getElementById('v_parcela_div').innerHTML = parcelas[id].installmentAmount;
+                    document.getElementById('t_parcela_div').innerHTML = parcelas[id].totalAmount;
                 }
                 ii++
             }

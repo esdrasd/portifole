@@ -107,7 +107,7 @@ class controller_ecommerci extends Controller
         $install = [];
 
         $key = 0;
-
+        
         $config['email'] = "esdrassousa76@gmail.com";
         $config['token'] = "13ACCD9BA759496B98B87DD7AD13DBD3";
         $config['paymentMode'] = 'default';
@@ -131,7 +131,7 @@ class controller_ecommerci extends Controller
         $comprador['senderCPF'] = "72962940005";
         $comprador['senderAreaCode'] = "11";
         $comprador['senderPhone'] = "56273440";
-        $comprador['senderEmail'] = "esd@esd"; //cliente
+        $comprador['senderEmail'] = "comprador@uol.com.br";
 
         $shipping['shippingAddressRequired'] = "true";
         $shipping['shippingAddressStreet'] = "Av. Brig. Faria Lima";
@@ -283,7 +283,6 @@ class controller_ecommerci extends Controller
     {
         return session()->all();
     }
-
     function xx()
     {
 

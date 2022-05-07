@@ -23747,19 +23747,19 @@ var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 
 var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<input type=\"hidden\" id=\"id_creditCard\" name=\"id_creditCard\"><input type=\"hidden\" id=\"id_comprador_creditCard\" name=\"id_comprador_creditCard\"><input type=\"hidden\" id=\"id_card\" name=\"id_card\"><br><input class=\"border\" type=\"text\" id=\"n_card\" name=\"n_card\" placeholder=\"n_card\" value=\"4111111111111111\"><br><input class=\"border\" type=\"text\" id=\"cvv\" name=\"cvv\" placeholder=\"cvv\" value=\"013\"><br><input class=\"border\" type=\"text\" id=\"mes\" name=\"mes\" placeholder=\"mes\" value=\"12\"><br><input class=\"border\" type=\"text\" id=\"ano\" name=\"ano\" placeholder=\"ano\" value=\"2026\">", 11);
 
-var _hoisted_35 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<br><div class=\"card\"><h1><div id=\"n_bandeira\"></div></h1><div id=\"bandeira\"></div></div><br><div class=\"card\"><select id=\"parcelas\" name=\"parcelas\" class=\"border\"><option>parcelas</option></select></div><br> Valor da Parcelas R$: <div id=\"v_parcela\" name=\"v_parcela\"></div> Total da Parcelas R$: <div id=\"t_parcela\" name=\"t_parcela\"></div><br>", 10);
+var _hoisted_35 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<br><div class=\"card\"><h1><div id=\"n_bandeira\"></div></h1><div id=\"bandeira\"></div></div><br><div class=\"card\"><select id=\"parcelas\" name=\"parcelas\" class=\"border-dark\"><option>parcelas</option></select></div><br><div class=\"card\"> Valor da Parcelas R$: <input type=\"hidden\" id=\"v_parcela\" name=\"v_parcela\"><div id=\"v_parcela_div\"></div><hr> Total da Parcelas R$: <input type=\"hidden\" id=\"t_parcela\" name=\"t_parcela\"><div id=\"t_parcela_div\"></div></div><br>", 7);
 
-var _hoisted_45 = {
+var _hoisted_42 = {
   "class": "card"
 };
 
-var _hoisted_46 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_43 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   id: "meios_pagamentos"
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_47 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
+var _hoisted_44 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
 /* HOISTED */
 );
 
@@ -23818,7 +23818,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelRadio, $data.modo]]), _hoisted_24]), _hoisted_35, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_45, [_hoisted_46, _hoisted_47, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelRadio, $data.modo]]), _hoisted_24]), _hoisted_35, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_42, [_hoisted_43, _hoisted_44, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     "class": "btn btn-outline-dark",
     type: "submit",
     onClick: _cache[2] || (_cache[2] = function ($event) {
@@ -24438,15 +24438,16 @@ function parcela(nome) {
       var ii = 1;
 
       for (var i = 0; i < parcelas.length; i++) {
-        document.getElementById('parcelas').innerHTML += "<option value=" + ii + ">" + 'parcelas: ' + parcelas[i].quantity + "</option>"; // console.log(ii);
+        document.getElementById('parcelas').innerHTML += "<option value=" + ii + ">" + 'parcelas: ' + parcelas[i].quantity + "</option>";
 
         document.getElementById('parcelas').onclick = function () {
           var qtd = document.getElementById('parcelas').value;
           var id = JSON.parse(qtd);
-          id -= 1; // console.log(id-=1);
-
-          document.getElementById('v_parcela').innerHTML = parcelas[id].installmentAmount;
-          document.getElementById('t_parcela').innerHTML = parcelas[id].totalAmount;
+          id -= 1;
+          document.getElementById('v_parcela').value = parcelas[id].installmentAmount;
+          document.getElementById('t_parcela').value = parcelas[id].totalAmount;
+          document.getElementById('v_parcela_div').innerHTML = parcelas[id].installmentAmount;
+          document.getElementById('t_parcela_div').innerHTML = parcelas[id].totalAmount;
         };
 
         ii++;

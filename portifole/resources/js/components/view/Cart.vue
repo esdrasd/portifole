@@ -3,7 +3,6 @@
     <div class="cartprod card">
         <div v-for="(i, key) in dados" :key="i">
             <div class="cartitem">
-
                 <div class="cartgroup">
                     <div class="cartstatusbutton">
                         <img :src="'storage/' + i.img" style="height: 200px; width: 200px" />
@@ -16,17 +15,15 @@
                         <input class="btn btn-outline-dark" type="button" value="delete" @click="del(key)" />
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-
     <div class="cartvalores card">
         <div class="card">
             <h1>Total dos Price:</h1>
             <input type="hidden" id="produto" name="produto" />
             <input type="hidden" id="price" name="price" :value="price" />
-            <div id="price" name="price">R$: {{price}}</div>
+            <div id="price" name="price">R$: {{ price }}</div>
         </div>
         <div class="card">
             <label for="boleto">
@@ -44,35 +41,42 @@
             <input type="hidden" id="id_creditCard" name="id_creditCard" />
             <input type="hidden" id="id_comprador_creditCard" name="id_comprador_creditCard" />
             <input type="hidden" id="id_card" name="id_card" />
-            <br>
+            <br />
             <input class="border" type="text" id="n_card" name="n_card" placeholder="n_card" value="4111111111111111" />
-            <br>
-            <input class="border" type="text" id='cvv' name='cvv' placeholder="cvv" value="013">
-            <br>
-            <input class="border" type="text" id='mes' name='mes' placeholder="mes" value="12">
-            <br>
-            <input class="border" type="text" id='ano' name='ano' placeholder="ano" value="2026">
+            <br />
+            <input class="border" type="text" id="cvv" name="cvv" placeholder="cvv" value="013" />
+            <br />
+            <input class="border" type="text" id="mes" name="mes" placeholder="mes" value="12" />
+            <br />
+            <input class="border" type="text" id="ano" name="ano" placeholder="ano" value="2026" />
         </div>
-        <br>
+        <br />
         <div class="card">
             <h1>
                 <div id="n_bandeira"></div>
             </h1>
             <div id="bandeira"></div>
         </div>
-        <br>
+        <br />
         <div class="card">
-            <select id="parcelas" name="parcelas" class="border">
+            <select id="parcelas" name="parcelas" class="border-dark">
                 <option>parcelas</option>
             </select>
         </div>
-        <br>
-        Valor da Parcelas R$: <div id="v_parcela" name="v_parcela"></div>
-        Total da Parcelas R$: <div id="t_parcela" name="t_parcela"></div>
-        <br>
+        <br />
+        <div class="card">
+            Valor da Parcelas R$:
+            <input type="hidden" id="v_parcela" name="v_parcela">
+            <div id="v_parcela_div"></div>
+            <hr>
+            Total da Parcelas R$:
+            <input type="hidden" id="t_parcela" name="t_parcela">
+            <div id="t_parcela_div"></div>
+        </div>
+        <br />
         <div class="card">
             <div id="meios_pagamentos"></div>
-            <br>
+            <br />
             <input class="btn btn-outline-dark" type="submit" @click="pagamento()" value="pagamento" />
         </div>
     </div>
