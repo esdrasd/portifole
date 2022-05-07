@@ -3,7 +3,7 @@
     <div v-for="img in dados" :key="img">
         <div v-if="img.id == id">
             <div class="comprarCard">
-                <div class="comprarImg card">
+                <div class="comprarImg">
                     <div v-for="(fotos, ii) in JSON.parse(img.img)" :key="fotos">
                         <div v-if="ii == corx">
                             <img :src="'storage/' + fotos" style="height: 200px; width: 200px" />

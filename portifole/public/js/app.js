@@ -24074,7 +24074,7 @@ var _hoisted_3 = {
   "class": "comprarCard"
 };
 var _hoisted_4 = {
-  "class": "comprarImg card"
+  "class": "comprarImg"
 };
 var _hoisted_5 = {
   key: 0

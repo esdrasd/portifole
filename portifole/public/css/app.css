@@ -2,7 +2,6 @@ body {
     margin: 0px;
     padding: 0px;
 }
-
 /* center e alinhamento */
 .HomeCards,
 .HomeCardIMG {
@@ -27,6 +26,11 @@ body {
 /* margin */
 .HomeCardMargin {
     margin: 40px;
+}
+
+.comprarCenter {
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 /* center card */
@@ -64,6 +68,12 @@ body {
     margin: 10px;
 }
 
+.comprarCard {
+    display: flex;
+}
+.comprarStatus,.comprarImg{
+    padding: 30px;
+}
 /* center */
 .Cart-Ordem,
 .Cart-Item {
