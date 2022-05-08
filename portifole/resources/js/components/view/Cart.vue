@@ -1,26 +1,23 @@
 <template>
-<div class="cartbase">
-    <div class="cartprod card">
+<div class="cartBase">
+    <div class="cartCenter card">
         <div v-for="(i, key) in dados" :key="i">
-            <div class="cartitem">
-                <div class="cartgroup">
-                    <div class="cartstatusbutton">
-                        <img :src="'storage/' + i.img" style="height: 200px; width: 200px" />
-                        <div class="cartitemstatus card">
-                            <h5 class="card-title">Nome: {{ i.desc }}</h5>
-                            <h5 class="card-title">Produto: {{ i.nome }}</h5>
-                            <h5 class="card-title">Quantidade: {{ i.count }}</h5>
-                            <h5 class="card-title">R$: {{ i.price }}</h5>
-                        </div>
-                    </div>
-                    <div class="cartbutton card">
-                        <input class="btn btn-outline-dark" type="button" value="delete" @click="del(key)" />
+            <div class="cardCardStatus card">
+                <div class="cartCard">
+                    <img :src="'storage/' + i.img" style="height: 200px; width: 200px" />
+                    <div class="cartStatus">
+                        <h5 class="card-title">Nome: {{ i.desc }}</h5>
+                        <h5 class="card-title">Produto: {{ i.nome }}</h5>
+                        <h5 class="card-title">Quantidade: {{ i.count }}</h5>
+                        <h5 class="card-title">R$: {{ i.price }}</h5>
                     </div>
                 </div>
+                <input class="btn btn-outline-dark" type="button" value="delete" @click="del(key)" />
             </div>
         </div>
     </div>
-    <div class="cartvalores card">
+
+    <div class="cartPagamento">
         <div class="card">
             <h1>Total dos Price:</h1>
             <input type="hidden" id="produto" name="produto" />
