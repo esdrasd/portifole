@@ -13,10 +13,9 @@
                 <div class="comprarStatus">
                     <h5 class="card-title">Nome: {{ img.desc }}</h5>
                     <h5 class="card-title">Categoria: {{ img.nome }}</h5>
-                    <h5 class="card-title">
-                        R$: {{ (price_qtd = img.price * count) }}
-                    </h5>
                     <h5 class="card-title">Quantidade: {{ count }}</h5>
+                    <h5 class="card-title">Valores unitarios R$: {{ (img.price) }}</h5>
+                    <h5 class="card-title">Valores Somados R$: {{ (price_qtd = img.price * count) }}</h5>
                     <div class="card" v-if="count > 0">
                         <input class="btn btn-outline-dark" type="button" v-on:click="count++" value="( + )" />
                         <br />
@@ -26,7 +25,7 @@
             </div>
             <div v-for="(prod, ii) in JSON.parse(img.img)" :key="prod">
                 <div class="comprarOp card">
-                    <input class="btn btn-outline-dark" type="button" @click="cor(ii)" :value="'cor' + ii" />
+                    <input class="btn btn-outline-dark" type="button" @click="cor(ii)" :value="'cor - ' + ii" />
                 </div>
             </div>
             <div v-if="count > 0">
@@ -36,6 +35,7 @@
                     img.id,
                     img.desc,
                     img.nome,
+                    img.price,
                     count,
                     price_qtd,
                     JSON.parse(img.img)[corx]
@@ -73,14 +73,15 @@ export default {
         cor(ii) {
             this.corx = ii;
         },
-        add_cart(id, desc, nome, count, price, img) {
+        add_cart(id, desc, nome, price, count, price_qtd, img) {
             this.vetor.splice(0);
             var json = {
                 id,
                 desc,
                 nome,
-                count,
                 price,
+                count,
+                price_qtd,
                 img,
             };
             if (typeof sessionStorage.getItem("cart") === "string") {

@@ -53,6 +53,10 @@ class controller_ecommerci extends Controller
         $prod = [];
         $shipping = [];
         $key = 0;
+        $test = 0;
+
+        $idx = session()->get('id');
+        $model = model_crud::where('id', $idx)->first();
 
         $config['email'] = "esdrassousa76@gmail.com";
         $config['token'] = "13ACCD9BA759496B98B87DD7AD13DBD3";
@@ -64,37 +68,40 @@ class controller_ecommerci extends Controller
         $config['reference'] = 'REF1234';
 
         $comprador['senderHash'] = $req->id_comprador_boleto;
-        $comprador['senderName'] = "Jose Comprador";
-        $comprador['senderCPF'] = "72962940005";
-        $comprador['senderAreaCode'] = "11";
-        $comprador['senderPhone'] = "56273440";
-        $comprador['senderEmail'] = "comprador@uol.com.br";
+        $comprador['senderName'] = $model->nome;
+        $comprador['senderCPF'] = $model->cpf;
+        $comprador['senderAreaCode'] = $model->ddd;
+        $comprador['senderPhone'] = $model->telefone;
+        $comprador['senderEmail'] = $model->email;
 
         foreach (json_decode($req->produto) as $i) {
             $key++;
-
             $prod['itemId' . $key] = $key;
             $prod['itemDescription' . $key] = $i->nome;
             $prod['itemAmount' . $key] = number_format($i->price, 2, '.', '');
-            $prod['itemQuantity' . $key] = '1';
+            $prod['itemQuantity' . $key] = $i->count;
         }
 
-
         $shipping['shippingAddressRequired'] = "true";
-        $shipping['shippingAddressStreet'] = "Av. Brig. Faria Lima";
-        $shipping['shippingAddressNumber'] = "1384";
-        $shipping['shippingAddressComplement'] = "5o andar";
-        $shipping['shippingAddressDistrict'] = "Jardim Paulistano";
-        $shipping['shippingAddressPostalCode'] = "01452002";
-        $shipping['shippingAddressCity'] = "Sao Paulo";
-        $shipping['shippingAddressState'] = "SP";
-        $shipping['shippingAddressCountry'] = "BRA";
+        $shipping['shippingAddressStreet'] = $model->enderecoNome;
+        $shipping['shippingAddressNumber'] = $model->enderecoNumero;
+        $shipping['shippingAddressComplement'] = $model->complemento;
+        $shipping['shippingAddressDistrict'] = $model->bairro;
+        $shipping['shippingAddressPostalCode'] = $model->cep;
+        $shipping['shippingAddressCity'] = $model->cidade;
+        $shipping['shippingAddressState'] = $model->estado;
+        $shipping['shippingAddressCountry'] = $model->pais;
 
-        $array = $config + $comprador + $prod + $shipping;
-        $url = "https://ws.sandbox.pagseguro.uol.com.br/v2/transactions?email=esdrassousa76@gmail.com&token=13ACCD9BA759496B98B87DD7AD13DBD3";
-        $id = Http::asForm()->post($url, $array);
-        $xml = simplexml_load_string($id);
-        return redirect($xml->paymentLink);
+        if ($test == 1) 
+        {
+            return $array = $config + $comprador + $prod + $shipping;
+        } else {
+            $array = $config + $comprador + $prod + $shipping;
+            $url = "https://ws.sandbox.pagseguro.uol.com.br/v2/transactions?email=esdrassousa76@gmail.com&token=13ACCD9BA759496B98B87DD7AD13DBD3";
+            $id = Http::asForm()->post($url, $array);
+            $xml = simplexml_load_string($id);
+            return redirect($xml->paymentLink);
+        }
     }
     function credito(Request $req)
     {
@@ -105,9 +112,12 @@ class controller_ecommerci extends Controller
         $credit = [];
         $billing = [];
         $install = [];
-
         $key = 0;
+        $test = 0;
         
+        $idx = session()->get('id');
+        $model = model_crud::where('id', $idx)->first();
+
         $config['email'] = "esdrassousa76@gmail.com";
         $config['token'] = "13ACCD9BA759496B98B87DD7AD13DBD3";
         $config['paymentMode'] = 'default';
@@ -121,13 +131,13 @@ class controller_ecommerci extends Controller
         foreach (json_decode($req->produto) as $i) {
             $key++;
             $prod['itemId' . $key] = $key;
-            $prod['itemDescription' . $key] =$i->desc." / ".$i->nome." / ".$i->img;
+            $prod['itemDescription' . $key] = $i->desc . " / " . $i->nome . " / " . $i->img;
             $prod['itemAmount' . $key] = number_format($i->price, 2, '.', '');
-            $prod['itemQuantity' . $key] = '1';
+            $prod['itemQuantity' . $key] = $i->count;
         }
 
         $comprador['senderHash'] = $req->id_comprador_creditCard;
-        $comprador['senderName'] = "Jose Comprador";
+        $comprador['senderName'] = $model->nome;
         $comprador['senderCPF'] = "72962940005";
         $comprador['senderAreaCode'] = "11";
         $comprador['senderPhone'] = "56273440";
@@ -163,11 +173,10 @@ class controller_ecommerci extends Controller
 
         $install['installmentQuantity'] = $req->parcelas;
         $install['installmentValue'] = number_format($req->v_parcela, 2, '.', '');
-        
-        $x = 01;
-        if($x == 0){
+
+        if ($test == 1){
             return $array = $config + $comprador + $prod + $shipping + $credit + $billing + $install;
-        }else{
+        } else {
             $array = $config + $comprador + $prod + $shipping + $credit + $billing + $install;
             $url = "https://ws.sandbox.pagseguro.uol.com.br/v2/transactions?email=esdrassousa76@gmail.com&token=13ACCD9BA759496B98B87DD7AD13DBD3";
             $id = Http::asForm()->post($url, $array);
@@ -200,7 +209,7 @@ class controller_ecommerci extends Controller
     {
         $user = DB::table('model_cruds')->where('email', $req->email)->first();
 
-        if($user == null){
+        if ($user == null) {
             return redirect()->route("index");
         }
 
@@ -223,62 +232,62 @@ class controller_ecommerci extends Controller
     function edit_perfil()
     {
         $id = session()->get('id');
-        return $model = model_crud::find($id);        
+        return $model = model_crud::find($id);
     }
     function edit_save(Request $req)
     {
         $id = session()->get('id');
         $model = model_crud::find($id);
-        
-        if(!$req->email == null){
+
+        if (!$req->email == null) {
             $model->email = $req->email;
         }
-        if(!$req->antigaSenha == null){
-            if(Hash::check($req->antigaSenha, $model->senha)){
+        if (!$req->antigaSenha == null) {
+            if (Hash::check($req->antigaSenha, $model->senha)) {
                 $model->senha = Hash::make($req->novaSenha);
             }
         }
-        if(!$req->nome == null){
+        if (!$req->nome == null) {
             $model->nome = $req->nome;
             session()->put('nome', $req->nome);
         }
-        if(!$req->cpf == null){
+        if (!$req->cpf == null) {
             $model->cpf = $req->cpf;
         }
-        if(!$req->ddd == null){
+        if (!$req->ddd == null) {
             $model->ddd = $req->ddd;
         }
-        if(!$req->telefone == null){
+        if (!$req->telefone == null) {
             $model->telefone = $req->telefone;
         }
-        if(!$req->enderecoNome == null){
+        if (!$req->enderecoNome == null) {
             $model->enderecoNome = $req->enderecoNome;
         }
-        if(!$req->enderecoNumero == null){
+        if (!$req->enderecoNumero == null) {
             $model->enderecoNumero = $req->enderecoNumero;
         }
-        if(!$req->complemento == null){
+        if (!$req->complemento == null) {
             $model->complemento = $req->complemento;
         }
-        if(!$req->bairro == null){
+        if (!$req->bairro == null) {
             $model->bairro = $req->bairro;
         }
-        if(!$req->cep == null){
+        if (!$req->cep == null) {
             $model->cep = $req->cep;
         }
-        if(!$req->cidade == null){
+        if (!$req->cidade == null) {
             $model->cidade = $req->cidade;
         }
-        if(!$req->estado == null){
+        if (!$req->estado == null) {
             $model->estado = $req->estado;
         }
-        if(!$req->pais == null){
+        if (!$req->pais == null) {
             $model->pais = $req->pais;
         }
-        if(!$req->dataNascimento == null){
+        if (!$req->dataNascimento == null) {
             $model->dataNascimento = $req->dataNascimento;
         }
-        if(!$req->ddd == null){
+        if (!$req->ddd == null) {
             $model->areaCode = $req->ddd;
         }
         $model->save();
@@ -305,7 +314,7 @@ class controller_ecommerci extends Controller
         // echo session()->flush();
 
         // session return 
-        return session()->all();
+        // return session()->all();
 
 
         // $y = 'oii'; $x = 'oi';
@@ -315,5 +324,17 @@ class controller_ecommerci extends Controller
         // } else {
         //     return "false";
         // }
+
+        $id = session()->get('id');
+        $model = model_crud::where('id', $id)->first();
+        echo $model->nome;
+        echo "<br>";
+        echo $model->cpf;
+        echo "<br>";
+        echo $model->ddd;
+        echo "<br>";
+        echo $model->telefone;
+        echo "<br>";
+        echo $model->email;
     }
 }

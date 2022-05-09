@@ -8,8 +8,9 @@
                     <div class="cartStatus">
                         <h5 class="card-title">Nome: {{ i.desc }}</h5>
                         <h5 class="card-title">Produto: {{ i.nome }}</h5>
-                        <h5 class="card-title">Quantidade: {{ i.count }}</h5>
-                        <h5 class="card-title">R$: {{ i.price }}</h5>
+                        <h5 class="card-title">Quantidade de Produto: {{ i.count }}</h5>
+                        <h5 class="card-title">Valores unitarios R$: {{ i.price }}</h5>
+                        <h5 class="card-title">Valores somados R$: {{ i.price_qtd }}</h5>
                     </div>
                 </div>
                 <input class="btn btn-outline-dark" type="button" value="delete" @click="del(key)" />
@@ -19,7 +20,7 @@
 
     <div class="cartPagamento">
         <div class="card">
-            <h1>Total dos Price:</h1>
+            <h1>Valores Total do Produto</h1>
             <input type="hidden" id="produto" name="produto" />
             <input type="hidden" id="price" name="price" :value="price" />
             <div id="price" name="price">R$: {{ price }}</div>
@@ -99,22 +100,26 @@ export default {
         for (let i = 0; i < obj.length; i++) {
             y.push(JSON.stringify(obj[i]));
         }
+
+        // del string repetidos
         var w = [...new Set(y)];
+        
         for (let i of w) {
             this.dados.push(JSON.parse(i));
             reescrever.push(JSON.parse(i));
         }
+        
         //reescrever
         sessionStorage.setItem("cart", JSON.stringify(reescrever));
 
         for (var i of this.dados) {
-            var price = JSON.parse(i.price);
+            var price = JSON.parse(i.price_qtd);
             this.price += price;
         }
     },
     methods: {
         del(key) {
-            this.price -= JSON.parse(this.dados[key].price);
+            this.price -= JSON.parse(this.dados[key].price_qtd);
             this.dados.splice(key, 1);
             var x = JSON.stringify(this.dados);
             sessionStorage.setItem("cart", x);

@@ -16,7 +16,7 @@
                     Senha Nova:
                     <input class="border border-dark" type="text" name="noveSenha" placeholder="nova senha" />
                     <br />
-                    Nome:
+                    Nome completo:
                     <input class="border border-dark" type="text" name="nome" :placeholder="dados.nome" />
                     <br />
                     CPF:
