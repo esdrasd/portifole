@@ -28,9 +28,9 @@ return new class extends Migration
             $table->string('cidade');   //shippingAddressCity && billingAddressCity
             $table->string('estado');   //shippingAddressState && billingAddressState
             $table->string('pais'); //shippingAddressCountry && billingAddressCountry
-            $table->string('dataNascimento'); //creditCardHolderBirthDate
+            $table->string('dataNascimento'); //creditCardHolderBirthDate 
             $table->string('areaCode'); //creditCardHolderAreaCode
-            $table->string('senha'); //creditCardHolderAreaCode
+            $table->string('senha'); //creditCardHolderAreaCode 
             $table->timestamps();
         });
     }

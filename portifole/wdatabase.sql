@@ -1,4 +1,5 @@
 show databases;
 use banco_laravel;
 show tables;
-SELECT * FROM model_produtos;
+SELECT dataNascimento FROM model_cruds;
+DESC model_cruds;

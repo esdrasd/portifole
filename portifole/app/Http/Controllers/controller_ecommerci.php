@@ -136,41 +136,40 @@ class controller_ecommerci extends Controller
             $prod['itemQuantity' . $key] = $i->count;
         }
 
-        $comprador['senderHash'] = $req->id_comprador_creditCard;
+        $comprador['senderHash'] = $req->id_comprador_boleto;
         $comprador['senderName'] = $model->nome;
-        $comprador['senderCPF'] = "72962940005";
-        $comprador['senderAreaCode'] = "11";
-        $comprador['senderPhone'] = "56273440";
-        $comprador['senderEmail'] = "comprador@uol.com.br";
+        $comprador['senderCPF'] = $model->cpf;
+        $comprador['senderAreaCode'] = $model->ddd;
+        $comprador['senderPhone'] = $model->telefone;
+        $comprador['senderEmail'] = $model->email;
 
         $shipping['shippingAddressRequired'] = "true";
-        $shipping['shippingAddressStreet'] = "Av. Brig. Faria Lima";
-        $shipping['shippingAddressNumber'] = "1384";
-        $shipping['shippingAddressComplement'] = "5o andar";
-        $shipping['shippingAddressDistrict'] = "Jardim Paulistano";
-        $shipping['shippingAddressPostalCode'] = "01452002";
-        $shipping['shippingAddressCity'] = "Sao Paulo";
-        $shipping['shippingAddressState'] = "SP";
-        $shipping['shippingAddressCountry'] = "BRA";
+        $shipping['shippingAddressStreet'] = $model->enderecoNome;
+        $shipping['shippingAddressNumber'] = $model->enderecoNumero;
+        $shipping['shippingAddressComplement'] = $model->complemento;
+        $shipping['shippingAddressDistrict'] = $model->bairro;
+        $shipping['shippingAddressPostalCode'] = $model->cep;
+        $shipping['shippingAddressCity'] = $model->cidade;
+        $shipping['shippingAddressState'] = $model->estado;
+        $shipping['shippingAddressCountry'] = $model->pais;
         $shipping['shippingType'] = "1";
         $shipping['shippingCost'] = "0.00";
 
         $credit['creditCardToken'] =  $req->id_card;
-        $credit['creditCardHolderName'] = "Jose Comprador";
-        $credit['creditCardHolderCPF'] = "22111944785";
-        $credit['creditCardHolderBirthDate'] = "27/10/1987";
-        $credit['creditCardHolderAreaCode'] = "11";
-        $credit['creditCardHolderPhone'] = "56273440";
+        $credit['creditCardHolderName'] = $model->nome;
+        $credit['creditCardHolderCPF'] = $model->cpf;
+        $credit['creditCardHolderBirthDate'] = date("d/m/Y", strtotime($model->dataNascimento));
+        $credit['creditCardHolderAreaCode'] = $model->ddd;
+        $credit['creditCardHolderPhone'] = $model->telefone;
 
-        $billing['billingAddressStreet'] = "Av. Brig. Faria Lima";
-        $billing['billingAddressNumber'] = "1384";
-        $billing['billingAddressComplement'] = "5o andar";
-        $billing['billingAddressDistrict'] = "Jardim Paulistano";
-        $billing['billingAddressPostalCode'] = "01452002";
-        $billing['billingAddressCity'] = "Sao Paulo";
-        $billing['billingAddressState'] = "SP";
-        $billing['billingAddressCountry'] = "BRA";
-
+        $billing['billingAddressStreet'] = $model->enderecoNome;
+        $billing['billingAddressNumber'] = $model->enderecoNumero;        
+        $billing['billingAddressComplement'] = $model->complemento;
+        $billing['billingAddressDistrict'] = $model->bairro;
+        $billing['billingAddressPostalCode'] = $model->cep;
+        $billing['billingAddressCity'] = $model->cidade;
+        $billing['billingAddressState'] = $model->estado;
+        $billing['billingAddressCountry'] = $model->pais;
         $install['installmentQuantity'] = $req->parcelas;
         $install['installmentValue'] = number_format($req->v_parcela, 2, '.', '');
 
@@ -327,14 +326,6 @@ class controller_ecommerci extends Controller
 
         $id = session()->get('id');
         $model = model_crud::where('id', $id)->first();
-        echo $model->nome;
-        echo "<br>";
-        echo $model->cpf;
-        echo "<br>";
-        echo $model->ddd;
-        echo "<br>";
-        echo $model->telefone;
-        echo "<br>";
-        echo $model->email;
+        return $newDate = date("d-m-Y", strtotime($model->dataNascimento));
     }
 }
