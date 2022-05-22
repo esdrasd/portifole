@@ -3,38 +3,38 @@
     <h1>Registrar</h1>
     <div class="regiscenter">
         <div class="regisCol1 card">
-            <input class="border border-dark" type="text" name='nome' placeholder="nome" value="Jose Comprador">
+            <input class="border border-dark" type="text" name='nome' placeholder="nome" value="">
             <br>
-            <input class="border border-dark" type="text" name='senha' placeholder="senha" value="12345-senha">
+            <input class="border border-dark" type="text" name='senha' placeholder="senha" value="">
             <br>
-            <input class="border border-dark" type="text" name='cpf' placeholder="cpf" value="72962940005">
+            <input class="border border-dark" type="text" name='cpf' placeholder="cpf" value="">
             <br>
-            <input class="border border-dark" type="text" name='ddd' placeholder="ddd" value="11">
+            <input class="border border-dark" type="text" name='ddd' placeholder="ddd" value="">
             <br>
-            <input class="border border-dark" type="text" name='telefone' placeholder="telefone" value="56273440">
+            <input class="border border-dark" type="text" name='telefone' placeholder="telefone" value="">
             <br>
-            <input class="border border-dark" type="text" name='email' placeholder="email" value="esd@esd">
+            <input class="border border-dark" type="text" name='email' placeholder="email" value="">
             <br>
-            <input class="border border-dark" type="text" name='enderecoNome' placeholder="endereço nome" value="Av. Brig. Faria Lima">
+            <input class="border border-dark" type="text" name='enderecoNome' placeholder="endereço nome" value="">
             <br>
-            <input class="border border-dark" type="text" name='enderecoNumero' placeholder="endereco numero" value="1384">
+            <input class="border border-dark" type="text" name='enderecoNumero' placeholder="endereco numero" value="">
         </div>
         <div class="regisCol2 card">
-            <input class="border border-dark" type="text" name='complemento' placeholder="complemento" value="5o andar">
+            <input class="border border-dark" type="text" name='complemento' placeholder="complemento" value="">
             <br>
-            <input class="border border-dark" type="text" name='bairro' placeholder="bairro" value="Jardim Paulistano">
+            <input class="border border-dark" type="text" name='bairro' placeholder="bairro" value="">
             <br>
-            <input class="border border-dark" type="text" name='cep' placeholder="cep" value="01452002">
+            <input class="border border-dark" type="text" name='cep' placeholder="cep" value="">
             <br>
-            <input class="border border-dark" type="text" name='cidade' placeholder="cidade" value="Sao Paulo">
+            <input class="border border-dark" type="text" name='cidade' placeholder="cidade" value="">
             <br>
-            <input class="border border-dark" type="text" name='estado' placeholder="estado" value="SP">
+            <input class="border border-dark" type="text" name='estado' placeholder="estado" value="">
             <br>
-            <input class="border border-dark" type="text" name='pais' placeholder="pais" value="BRA">
+            <input class="border border-dark" type="text" name='pais' placeholder="pais" value="">
             <br>
             <input class="border border-dark" type="date" name='dataNascimento' placeholder="dataNascimento" value="">
             <br>
-            <input class="border border-dark" type="text" name='areaCode' placeholder="areaCode" value="11">
+            <input class="border border-dark" type="text" name='areaCode' placeholder="areaCode" value="">
         </div>
     </div>
     <div class="card">

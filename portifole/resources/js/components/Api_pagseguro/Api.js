@@ -1,10 +1,3 @@
-// var price = 500.00;
-// var n_bandeira = 'visa';
-// var numero = '4111111111111111';
-// var cvv = '013';
-// var mes = '12';
-// var ano = '2026';
-
 function id() {
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {

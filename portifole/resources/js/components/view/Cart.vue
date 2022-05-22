@@ -42,13 +42,13 @@
             <input type="hidden" id="id_comprador_creditCard" name="id_comprador_creditCard" />
             <input type="hidden" id="id_card" name="id_card" />
             <br />
-            <input class="border" type="text" id="n_card" name="n_card" placeholder="n_card" value="4111111111111111" />
+            <input class="border" type="text" id="n_card" name="n_card" placeholder="n_card" value="" />
             <br />
-            <input class="border" type="text" id="cvv" name="cvv" placeholder="cvv" value="013" />
+            <input class="border" type="text" id="cvv" name="cvv" placeholder="cvv" value="" />
             <br />
-            <input class="border" type="text" id="mes" name="mes" placeholder="mes" value="12" />
+            <input class="border" type="text" id="mes" name="mes" placeholder="mes" value="" />
             <br />
-            <input class="border" type="text" id="ano" name="ano" placeholder="ano" value="2026" />
+            <input class="border" type="text" id="ano" name="ano" placeholder="ano" value="" />
         </div>
         <br />
         <div class="card">

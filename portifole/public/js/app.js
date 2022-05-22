@@ -23424,256 +23424,13 @@ var _hoisted_1 = {
   "class": "editBase"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", null, "Editar", -1
-/* HOISTED */
-);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<h1>Editar</h1><div class=\"regiscenter\"><div class=\"editCol1 card\"> Email: <input class=\"border border-dark\" type=\"text\" name=\"email\" placeholder=\"email\"><br> Senha Antiga: <input class=\"border border-dark\" type=\"text\" name=\"antigaSenha\" placeholder=\"antiga senha\"><br> Senha Nova: <input class=\"border border-dark\" type=\"text\" name=\"noveSenha\" placeholder=\"nova senha\"><br> Nome completo: <input class=\"border border-dark\" type=\"text\" name=\"nome\" placeholder=\"nome\"><br> CPF: <input class=\"border border-dark\" type=\"text\" name=\"cpf\" placeholder=\"cpf\"><br> DDD: <input class=\"border border-dark\" type=\"text\" name=\"ddd\" placeholder=\"ddd\"><br> TELEFONE: <input class=\"border border-dark\" type=\"text\" name=\"telefone\" placeholder=\"telefone\"><br> ENDEREÇO: <input class=\"border border-dark\" type=\"text\" name=\"enderecoNome\" placeholder=\"enderecoNome\"><br> NUMERO: <input class=\"border border-dark\" type=\"text\" name=\"enderecoNumero\" placeholder=\"enderecoNumero\"></div><div class=\"editCol2 card\"> Complemento: <input class=\"border border-dark\" type=\"text\" name=\"complemento\" placeholder=\"complemento\"><br> Bairro: <input class=\"border border-dark\" type=\"text\" name=\"bairro\" placeholder=\"bairro\"><br> CEP: <input class=\"border border-dark\" type=\"text\" name=\"cep\" placeholder=\"cep\"><br> CIDADE: <input class=\"border border-dark\" type=\"text\" name=\"cidade\" placeholder=\"cidade\"><br> ESTADO <input class=\"border border-dark\" type=\"text\" name=\"estado\" placeholder=\"estado\"><br> PAIS: <input class=\"border border-dark\" type=\"text\" name=\"pais\" placeholder=\"pais\"><br> DATA NASCIMENTO <input class=\"border border-dark\" type=\"date\" name=\"dataNascimento\" placeholder=\"dataNascimento\"></div></div>", 2);
 
-var _hoisted_3 = {
-  "class": "regiscenter"
-};
 var _hoisted_4 = {
-  "class": "editCol1 card"
-};
-
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Email: ");
-
-var _hoisted_6 = ["placeholder"];
-
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
-/* HOISTED */
-);
-
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Senha Antiga: ");
-
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-  "class": "border border-dark",
-  type: "text",
-  name: "antigaSenha",
-  placeholder: "antiga senha"
-}, null, -1
-/* HOISTED */
-);
-
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
-/* HOISTED */
-);
-
-var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Senha Nova: ");
-
-var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-  "class": "border border-dark",
-  type: "text",
-  name: "noveSenha",
-  placeholder: "nova senha"
-}, null, -1
-/* HOISTED */
-);
-
-var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
-/* HOISTED */
-);
-
-var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Nome completo: ");
-
-var _hoisted_15 = ["placeholder"];
-
-var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
-/* HOISTED */
-);
-
-var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" CPF: ");
-
-var _hoisted_18 = ["placeholder"];
-
-var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
-/* HOISTED */
-);
-
-var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" DDD: ");
-
-var _hoisted_21 = ["placeholder"];
-
-var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
-/* HOISTED */
-);
-
-var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" TELEFONE: ");
-
-var _hoisted_24 = ["placeholder"];
-
-var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
-/* HOISTED */
-);
-
-var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" ENDEREÇO: ");
-
-var _hoisted_27 = ["placeholder"];
-
-var _hoisted_28 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
-/* HOISTED */
-);
-
-var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" NUMERO: ");
-
-var _hoisted_30 = ["placeholder"];
-var _hoisted_31 = {
-  "class": "editCol2 card"
-};
-
-var _hoisted_32 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Complemento: ");
-
-var _hoisted_33 = ["placeholder"];
-
-var _hoisted_34 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
-/* HOISTED */
-);
-
-var _hoisted_35 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Bairro: ");
-
-var _hoisted_36 = ["placeholder"];
-
-var _hoisted_37 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
-/* HOISTED */
-);
-
-var _hoisted_38 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" CEP: ");
-
-var _hoisted_39 = ["placeholder"];
-
-var _hoisted_40 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
-/* HOISTED */
-);
-
-var _hoisted_41 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" CIDADE: ");
-
-var _hoisted_42 = ["placeholder"];
-
-var _hoisted_43 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
-/* HOISTED */
-);
-
-var _hoisted_44 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" ESTADO ");
-
-var _hoisted_45 = ["placeholder"];
-
-var _hoisted_46 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
-/* HOISTED */
-);
-
-var _hoisted_47 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" PAIS: ");
-
-var _hoisted_48 = ["placeholder"];
-
-var _hoisted_49 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
-/* HOISTED */
-);
-
-var _hoisted_50 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" DATA NASCIMENTO ");
-
-var _hoisted_51 = ["placeholder"];
-var _hoisted_52 = {
   "class": "editColbutton card"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    "class": "border border-dark",
-    type: "text",
-    name: "email",
-    placeholder: $data.dados.email
-  }, null, 8
-  /* PROPS */
-  , _hoisted_6), _hoisted_7, _hoisted_8, _hoisted_9, _hoisted_10, _hoisted_11, _hoisted_12, _hoisted_13, _hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    "class": "border border-dark",
-    type: "text",
-    name: "nome",
-    placeholder: $data.dados.nome
-  }, null, 8
-  /* PROPS */
-  , _hoisted_15), _hoisted_16, _hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    "class": "border border-dark",
-    type: "text",
-    name: "cpf",
-    placeholder: $data.dados.cpf
-  }, null, 8
-  /* PROPS */
-  , _hoisted_18), _hoisted_19, _hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    "class": "border border-dark",
-    type: "text",
-    name: "ddd",
-    placeholder: $data.dados.ddd
-  }, null, 8
-  /* PROPS */
-  , _hoisted_21), _hoisted_22, _hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    "class": "border border-dark",
-    type: "text",
-    name: "telefone",
-    placeholder: $data.dados.telefone
-  }, null, 8
-  /* PROPS */
-  , _hoisted_24), _hoisted_25, _hoisted_26, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    "class": "border border-dark",
-    type: "text",
-    name: "enderecoNome",
-    placeholder: $data.dados.enderecoNome
-  }, null, 8
-  /* PROPS */
-  , _hoisted_27), _hoisted_28, _hoisted_29, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    "class": "border border-dark",
-    type: "text",
-    name: "enderecoNumero",
-    placeholder: $data.dados.enderecoNumero
-  }, null, 8
-  /* PROPS */
-  , _hoisted_30)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [_hoisted_32, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    "class": "border border-dark",
-    type: "text",
-    name: "complemento",
-    placeholder: $data.dados.complemento
-  }, null, 8
-  /* PROPS */
-  , _hoisted_33), _hoisted_34, _hoisted_35, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    "class": "border border-dark",
-    type: "text",
-    name: "bairro",
-    placeholder: $data.dados.bairro
-  }, null, 8
-  /* PROPS */
-  , _hoisted_36), _hoisted_37, _hoisted_38, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    "class": "border border-dark",
-    type: "text",
-    name: "cep",
-    placeholder: $data.dados.cep
-  }, null, 8
-  /* PROPS */
-  , _hoisted_39), _hoisted_40, _hoisted_41, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    "class": "border border-dark",
-    type: "text",
-    name: "cidade",
-    placeholder: $data.dados.cidade
-  }, null, 8
-  /* PROPS */
-  , _hoisted_42), _hoisted_43, _hoisted_44, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    "class": "border border-dark",
-    type: "text",
-    name: "estado",
-    placeholder: $data.dados.estado
-  }, null, 8
-  /* PROPS */
-  , _hoisted_45), _hoisted_46, _hoisted_47, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    "class": "border border-dark",
-    type: "text",
-    name: "pais",
-    placeholder: $data.dados.pais
-  }, null, 8
-  /* PROPS */
-  , _hoisted_48), _hoisted_49, _hoisted_50, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    "class": "border border-dark",
-    type: "date",
-    name: "dataNascimento",
-    placeholder: $data.dados.dataNascimento
-  }, null, 8
-  /* PROPS */
-  , _hoisted_51)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_52, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     "class": "btn btn-outline-dark",
     type: "submit",
     value: "save",
@@ -23702,7 +23459,7 @@ var _hoisted_1 = {
   "class": "regisBase"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<h1>Registrar</h1><div class=\"regiscenter\"><div class=\"regisCol1 card\"><input class=\"border border-dark\" type=\"text\" name=\"nome\" placeholder=\"nome\" value=\"Jose Comprador\"><br><input class=\"border border-dark\" type=\"text\" name=\"senha\" placeholder=\"senha\" value=\"12345-senha\"><br><input class=\"border border-dark\" type=\"text\" name=\"cpf\" placeholder=\"cpf\" value=\"72962940005\"><br><input class=\"border border-dark\" type=\"text\" name=\"ddd\" placeholder=\"ddd\" value=\"11\"><br><input class=\"border border-dark\" type=\"text\" name=\"telefone\" placeholder=\"telefone\" value=\"56273440\"><br><input class=\"border border-dark\" type=\"text\" name=\"email\" placeholder=\"email\" value=\"esd@esd\"><br><input class=\"border border-dark\" type=\"text\" name=\"enderecoNome\" placeholder=\"endereço nome\" value=\"Av. Brig. Faria Lima\"><br><input class=\"border border-dark\" type=\"text\" name=\"enderecoNumero\" placeholder=\"endereco numero\" value=\"1384\"></div><div class=\"regisCol2 card\"><input class=\"border border-dark\" type=\"text\" name=\"complemento\" placeholder=\"complemento\" value=\"5o andar\"><br><input class=\"border border-dark\" type=\"text\" name=\"bairro\" placeholder=\"bairro\" value=\"Jardim Paulistano\"><br><input class=\"border border-dark\" type=\"text\" name=\"cep\" placeholder=\"cep\" value=\"01452002\"><br><input class=\"border border-dark\" type=\"text\" name=\"cidade\" placeholder=\"cidade\" value=\"Sao Paulo\"><br><input class=\"border border-dark\" type=\"text\" name=\"estado\" placeholder=\"estado\" value=\"SP\"><br><input class=\"border border-dark\" type=\"text\" name=\"pais\" placeholder=\"pais\" value=\"BRA\"><br><input class=\"border border-dark\" type=\"date\" name=\"dataNascimento\" placeholder=\"dataNascimento\" value=\"\"><br><input class=\"border border-dark\" type=\"text\" name=\"areaCode\" placeholder=\"areaCode\" value=\"11\"></div></div>", 2);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<h1>Registrar</h1><div class=\"regiscenter\"><div class=\"regisCol1 card\"><input class=\"border border-dark\" type=\"text\" name=\"nome\" placeholder=\"nome\" value=\"\"><br><input class=\"border border-dark\" type=\"text\" name=\"senha\" placeholder=\"senha\" value=\"\"><br><input class=\"border border-dark\" type=\"text\" name=\"cpf\" placeholder=\"cpf\" value=\"\"><br><input class=\"border border-dark\" type=\"text\" name=\"ddd\" placeholder=\"ddd\" value=\"\"><br><input class=\"border border-dark\" type=\"text\" name=\"telefone\" placeholder=\"telefone\" value=\"\"><br><input class=\"border border-dark\" type=\"text\" name=\"email\" placeholder=\"email\" value=\"\"><br><input class=\"border border-dark\" type=\"text\" name=\"enderecoNome\" placeholder=\"endereço nome\" value=\"\"><br><input class=\"border border-dark\" type=\"text\" name=\"enderecoNumero\" placeholder=\"endereco numero\" value=\"\"></div><div class=\"regisCol2 card\"><input class=\"border border-dark\" type=\"text\" name=\"complemento\" placeholder=\"complemento\" value=\"\"><br><input class=\"border border-dark\" type=\"text\" name=\"bairro\" placeholder=\"bairro\" value=\"\"><br><input class=\"border border-dark\" type=\"text\" name=\"cep\" placeholder=\"cep\" value=\"\"><br><input class=\"border border-dark\" type=\"text\" name=\"cidade\" placeholder=\"cidade\" value=\"\"><br><input class=\"border border-dark\" type=\"text\" name=\"estado\" placeholder=\"estado\" value=\"\"><br><input class=\"border border-dark\" type=\"text\" name=\"pais\" placeholder=\"pais\" value=\"\"><br><input class=\"border border-dark\" type=\"date\" name=\"dataNascimento\" placeholder=\"dataNascimento\" value=\"\"><br><input class=\"border border-dark\" type=\"text\" name=\"areaCode\" placeholder=\"areaCode\" value=\"\"></div></div>", 2);
 
 var _hoisted_4 = {
   "class": "card"
@@ -23866,7 +23623,7 @@ var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<input type=\"hidden\" id=\"id_creditCard\" name=\"id_creditCard\"><input type=\"hidden\" id=\"id_comprador_creditCard\" name=\"id_comprador_creditCard\"><input type=\"hidden\" id=\"id_card\" name=\"id_card\"><br><input class=\"border\" type=\"text\" id=\"n_card\" name=\"n_card\" placeholder=\"n_card\" value=\"4111111111111111\"><br><input class=\"border\" type=\"text\" id=\"cvv\" name=\"cvv\" placeholder=\"cvv\" value=\"013\"><br><input class=\"border\" type=\"text\" id=\"mes\" name=\"mes\" placeholder=\"mes\" value=\"12\"><br><input class=\"border\" type=\"text\" id=\"ano\" name=\"ano\" placeholder=\"ano\" value=\"2026\">", 11);
+var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<input type=\"hidden\" id=\"id_creditCard\" name=\"id_creditCard\"><input type=\"hidden\" id=\"id_comprador_creditCard\" name=\"id_comprador_creditCard\"><input type=\"hidden\" id=\"id_card\" name=\"id_card\"><br><input class=\"border\" type=\"text\" id=\"n_card\" name=\"n_card\" placeholder=\"n_card\" value=\"\"><br><input class=\"border\" type=\"text\" id=\"cvv\" name=\"cvv\" placeholder=\"cvv\" value=\"\"><br><input class=\"border\" type=\"text\" id=\"mes\" name=\"mes\" placeholder=\"mes\" value=\"\"><br><input class=\"border\" type=\"text\" id=\"ano\" name=\"ano\" placeholder=\"ano\" value=\"\">", 11);
 
 var _hoisted_36 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<br><div class=\"card\"><h1><div id=\"n_bandeira\"></div></h1><div id=\"bandeira\"></div></div><br><div class=\"card\"><select id=\"parcelas\" name=\"parcelas\" class=\"border-dark\"><option>parcelas</option></select></div><br><div class=\"card\"> Valor da Parcelas R$: <input type=\"hidden\" id=\"v_parcela\" name=\"v_parcela\"><div id=\"v_parcela_div\"></div><hr> Total da Parcelas R$: <input type=\"hidden\" id=\"t_parcela\" name=\"t_parcela\"><div id=\"t_parcela_div\"></div></div><br>", 7);
 
@@ -24279,42 +24036,51 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
-var _hoisted_1 = {
+
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" comprador@uol.com.br ");
+
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
+/* HOISTED */
+);
+
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" 12345-senha ");
+
+var _hoisted_4 = {
   "class": "HomeCards"
 };
-var _hoisted_2 = {
+var _hoisted_5 = {
   "class": "HomeCardMargin card",
   style: {
     "width": "300px"
   }
 };
-var _hoisted_3 = {
+var _hoisted_6 = {
   "class": "HomeCardIMG"
 };
-var _hoisted_4 = ["src", "onClick"];
-var _hoisted_5 = {
+var _hoisted_7 = ["src", "onClick"];
+var _hoisted_8 = {
   "class": "card-body"
 };
-var _hoisted_6 = {
+var _hoisted_9 = {
   style: {}
 };
-var _hoisted_7 = {
+var _hoisted_10 = {
   style: {}
 };
-var _hoisted_8 = {
+var _hoisted_11 = {
   style: {}
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.dados, function (i) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [_hoisted_1, _hoisted_2, _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.dados, function (i) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       key: i
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
       to: '/comprar/' + i.nome
     }, {
       "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-        return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+        return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
           "class": "card-img-top",
           src: 'storage/' + JSON.parse(i.img)[0],
           style: {
@@ -24326,23 +24092,25 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           }
         }, null, 8
         /* PROPS */
-        , _hoisted_4)])];
+        , _hoisted_7)])];
       }),
       _: 2
       /* DYNAMIC */
 
     }, 1032
     /* PROPS, DYNAMIC_SLOTS */
-    , ["to"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(i.desc), 1
+    , ["to"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(i.desc), 1
     /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", _hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(i.nome), 1
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(i.nome), 1
     /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", _hoisted_8, "R$ " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(i.price), 1
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", _hoisted_11, "R$ " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(i.price), 1
     /* TEXT */
     )])])]);
   }), 128
   /* KEYED_FRAGMENT */
-  ))]);
+  ))])], 64
+  /* STABLE_FRAGMENT */
+  );
 }
 
 /***/ }),
@@ -24497,7 +24265,7 @@ var _hoisted_25 = {
   "class": "LoginCss"
 };
 
-var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<h5>Login</h5><br><div class=\"form-floating mb-3\"><input type=\"email\" class=\"form-control\" id=\"floatingInput\" name=\"email\" placeholder=\"name@example.com\" value=\"comprador@uol.com.br\"><label for=\"floatingInput\">Email address</label></div><div class=\"form-floating\"><input type=\"password\" class=\"form-control\" id=\"floatingPassword\" name=\"senha\" placeholder=\"Password\" value=\"12345-senha\"><label for=\"floatingPassword\">Password</label></div><br>", 5);
+var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<h5>Login</h5><br><div class=\"form-floating mb-3\"><input type=\"email\" class=\"form-control\" id=\"floatingInput\" name=\"email\" placeholder=\"name@example.com\" value=\"\"><label for=\"floatingInput\">Email address</label></div><div class=\"form-floating\"><input type=\"password\" class=\"form-control\" id=\"floatingPassword\" name=\"senha\" placeholder=\"Password\" value=\"\"><label for=\"floatingPassword\">Password</label></div><br>", 5);
 
 var _hoisted_31 = {
   "class": "card"
@@ -24786,12 +24554,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-// var price = 500.00;
-// var n_bandeira = 'visa';
-// var numero = '4111111111111111';
-// var cvv = '013';
-// var mes = '12';
-// var ano = '2026';
 function id() {
   var xhttp = new XMLHttpRequest();
 

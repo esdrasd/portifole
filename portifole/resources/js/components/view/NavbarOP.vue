@@ -55,11 +55,13 @@
             <h5>Login</h5>
             <br />
             <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com" value="comprador@uol.com.br" />
+                
+                <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com" value="" />
                 <label for="floatingInput">Email address</label>
             </div>
             <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" name="senha" placeholder="Password" value="12345-senha" />
+                
+                <input type="password" class="form-control" id="floatingPassword" name="senha" placeholder="Password" value="" />
                 <label for="floatingPassword">Password</label>
             </div>
             <br />

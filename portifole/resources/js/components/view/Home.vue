@@ -1,4 +1,7 @@
 <template>
+comprador@uol.com.br
+<br>
+12345-senha
 <div class="HomeCards">
     <div v-for="i in dados" :key="i">
         <div class="HomeCardMargin card" style="width: 300px">
