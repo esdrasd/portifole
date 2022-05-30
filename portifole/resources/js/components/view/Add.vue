@@ -14,6 +14,7 @@
                     <option>Escolha a Categoria</option>
                     <option value="celular">celular</option>
                     <option value="game">game</option>
+                    <option value="notebook">notebook</option>
                 </select>
             </div>
             <br />
