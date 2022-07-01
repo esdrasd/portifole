@@ -9,6 +9,7 @@ use App\Models\model_add_produtosPerfil;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class controller_ecommerci extends Controller
 {
@@ -199,10 +200,12 @@ class controller_ecommerci extends Controller
         $model = new model_crud;
         $validar = new cpf_validar();
         $validar->validar($req->cpf);
-
-        $model->email = $req->email;
-        $model->senha = $req->senha;
-        // Hash::make($req->senha);
+        if (filter_var($req->email, FILTER_VALIDATE_EMAIL)) {
+            $model->email = $req->email;
+        } else {
+            return redirect()->route('edit');
+        }
+        $model->senha = Hash::make($req->senha);
         $model->nome = $req->nome;
         $model->cpf = $validar->cpf;
         $model->ddd = $req->ddd;
@@ -219,7 +222,9 @@ class controller_ecommerci extends Controller
         $model->dataNascimento = $req->dataNascimento;
 
         if ($validar->error == 0) {
-            $model->save();
+            $model->save();            
+            session()->flash('status', '1');
+            Alert::success('Enviado', 'add com sucesso');
             return redirect()->route('index');
         } else {
             return redirect()->route('registrar');
@@ -228,7 +233,7 @@ class controller_ecommerci extends Controller
     function login(Request $req)
     {
         $user = DB::table('model_cruds')->where('email', $req->email)->first();
-
+        
         if ($user == null) {
             return redirect()->route("index");
         }
@@ -318,7 +323,6 @@ class controller_ecommerci extends Controller
         if (!$req->ddd == null) {
             $model->areaCode = $req->ddd;
         }
-
         if ($erro == 0) {
             $model->save();
             return redirect()->route('edit');
@@ -368,6 +372,7 @@ class cpf_validar
 {
     public $cpf;
     public $error;
+
     function validar($validar)
     {
         $cpf = $validar;
