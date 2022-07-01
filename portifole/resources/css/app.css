@@ -3,7 +3,9 @@ body {
     padding: 0px;
 }
 
+
 /* center e alinhamento */
+
 .HomeCards,
 .HomeCardIMG {
     justify-content: center;
@@ -12,19 +14,25 @@ body {
     flex-wrap: wrap;
 }
 
+
 /* cener alinhamento */
+
 .HomeCards {
     height: 80vh;
     width: 100%;
 }
 
+
 /* img */
+
 .HomeCardIMG {
     height: 100%;
     width: 100%;
 }
 
+
 /* margin */
+
 .HomeCardMargin {
     margin: 40px;
 }
@@ -40,6 +48,17 @@ body {
     flex-wrap: wrap;
     height: 80vh;
     width: 100%;
+}
+
+.add_local_hist {
+    display: flex;
+    width: 100%;
+    overflow: auto;
+    padding: 10px;
+}
+
+.add_hist_card {
+    margin: 10px;
 }
 
 .add_center {

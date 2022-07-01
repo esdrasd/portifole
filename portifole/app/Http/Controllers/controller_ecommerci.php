@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\model_produtos;
 use App\Models\model_crud;
+use App\Models\model_add_produtosPerfil;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
@@ -28,12 +29,24 @@ class controller_ecommerci extends Controller
         foreach ($x as $v) {
             $img[] = $v->store('fotos', 'public');
         };
+
         $model = new model_produtos;
+        $model->id_perfil = session()->get('id');
         $model->desc = $req->desc;
         $model->nome = $req->nome;
         $model->price = $req->price;
         $model->img = json_encode($img);
         $model->save();
+        return redirect()->route('index');
+    }
+    function add_show_img()
+    {
+        $id = session()->get('id');
+        return $model = model_produtos::where('id_perfil', $id)->get();
+    }
+    function addCardDel(Request $req)
+    {
+        $model = model_produtos::where('id', $req->id)->delete();
         return redirect()->route('index');
     }
     function show()
@@ -92,8 +105,7 @@ class controller_ecommerci extends Controller
         $shipping['shippingAddressState'] = $model->estado;
         $shipping['shippingAddressCountry'] = $model->pais;
 
-        if ($test == 1) 
-        {
+        if ($test == 1) {
             return $array = $config + $comprador + $prod + $shipping;
         } else {
             $array = $config + $comprador + $prod + $shipping;
@@ -114,7 +126,7 @@ class controller_ecommerci extends Controller
         $install = [];
         $key = 0;
         $test = 0;
-        
+
         $idx = session()->get('id');
         $model = model_crud::where('id', $idx)->first();
 
@@ -163,7 +175,7 @@ class controller_ecommerci extends Controller
         $credit['creditCardHolderPhone'] = $model->telefone;
 
         $billing['billingAddressStreet'] = $model->enderecoNome;
-        $billing['billingAddressNumber'] = $model->enderecoNumero;        
+        $billing['billingAddressNumber'] = $model->enderecoNumero;
         $billing['billingAddressComplement'] = $model->complemento;
         $billing['billingAddressDistrict'] = $model->bairro;
         $billing['billingAddressPostalCode'] = $model->cep;
@@ -173,7 +185,7 @@ class controller_ecommerci extends Controller
         $install['installmentQuantity'] = $req->parcelas;
         $install['installmentValue'] = number_format($req->v_parcela, 2, '.', '');
 
-        if ($test == 1){
+        if ($test == 1) {
             return $array = $config + $comprador + $prod + $shipping + $credit + $billing + $install;
         } else {
             $array = $config + $comprador + $prod + $shipping + $credit + $billing + $install;
@@ -185,11 +197,17 @@ class controller_ecommerci extends Controller
     function registrar_cadastrar(Request $req)
     {
         $model = new model_crud;
-        $model->nome = $req->nome;
-        $model->cpf = $req->cpf;
-        $model->ddd = $req->ddd;
-        $model->telefone = $req->telefone;
+        $validar = new cpf_validar();
+        $validar->validar($req->cpf);
+
         $model->email = $req->email;
+        $model->senha = $req->senha;
+        // Hash::make($req->senha);
+        $model->nome = $req->nome;
+        $model->cpf = $validar->cpf;
+        $model->ddd = $req->ddd;
+        $model->areaCode = $req->ddd;
+        $model->telefone = $req->telefone;
         $model->enderecoNome = $req->enderecoNome;
         $model->enderecoNumero = $req->enderecoNumero;
         $model->complemento = $req->complemento;
@@ -199,10 +217,13 @@ class controller_ecommerci extends Controller
         $model->estado = $req->estado;
         $model->pais = $req->pais;
         $model->dataNascimento = $req->dataNascimento;
-        $model->areaCode = $req->areaCode;
-        $model->senha = $pass = Hash::make($req->senha);
-        $model->save();
-        return redirect()->route('index');
+
+        if ($validar->error == 0) {
+            $model->save();
+            return redirect()->route('index');
+        } else {
+            return redirect()->route('registrar');
+        }
     }
     function login(Request $req)
     {
@@ -211,11 +232,11 @@ class controller_ecommerci extends Controller
         if ($user == null) {
             return redirect()->route("index");
         }
-
         if (Hash::check($req->senha, $user->senha)) {
             session([
                 'key' => 1,
                 'nome' => $user->nome,
+                'email' => $req->email,
                 'id' => $user->id
             ]);
             return redirect()->route("index");
@@ -237,9 +258,15 @@ class controller_ecommerci extends Controller
     {
         $id = session()->get('id');
         $model = model_crud::find($id);
-
+        $validar = new cpf_validar();
+        $erro = null;
+        
         if (!$req->email == null) {
-            $model->email = $req->email;
+            if (filter_var($req->email, FILTER_VALIDATE_EMAIL)) {
+                $model->email = $req->email;
+            } else {
+                return redirect()->route('edit');
+            }
         }
         if (!$req->antigaSenha == null) {
             if (Hash::check($req->antigaSenha, $model->senha)) {
@@ -251,7 +278,9 @@ class controller_ecommerci extends Controller
             session()->put('nome', $req->nome);
         }
         if (!$req->cpf == null) {
-            $model->cpf = $req->cpf;
+            $validar->validar($req->cpf);
+            $model->cpf = $validar->cpf;
+            $erro = $validar->error;
         }
         if (!$req->ddd == null) {
             $model->ddd = $req->ddd;
@@ -289,8 +318,13 @@ class controller_ecommerci extends Controller
         if (!$req->ddd == null) {
             $model->areaCode = $req->ddd;
         }
-        $model->save();
-        return redirect()->route('edit');
+
+        if ($erro == 0) {
+            $model->save();
+            return redirect()->route('edit');
+        } else {
+            return redirect()->route('edit');
+        }
     }
     function session()
     {
@@ -313,7 +347,7 @@ class controller_ecommerci extends Controller
         // echo session()->flush();
 
         // session return 
-        // return session()->all();
+        return session()->all();
 
 
         // $y = 'oii'; $x = 'oi';
@@ -324,8 +358,50 @@ class controller_ecommerci extends Controller
         //     return "false";
         // }
 
-        $id = session()->get('id');
-        $model = model_crud::where('id', $id)->first();
-        return $newDate = date("d-m-Y", strtotime($model->dataNascimento));
+        // $id = session()->get('id');
+        // $model = model_crud::where('id', $id)->first();
+        // return $newDate = date("d-m-Y", strtotime($model->dataNascimento));
+    }
+}
+
+class cpf_validar
+{
+    public $cpf;
+    public $error;
+    function validar($validar)
+    {
+        $cpf = $validar;
+        $cpfx = preg_replace('/[^A-Za-z0-9]/', '', $cpf);
+        $cpfLimpo = substr(preg_replace('/[^A-Za-z0-9]/', '', $cpf), 0, 9);
+        $x = 10;
+        $soma = 0;
+        $y = 0;
+        // $erro = null;
+        
+        for ($i = 0; $i < strlen($cpfLimpo); $i++) {
+            $soma += intval($cpfLimpo[$i])  * $x--;
+        }
+        if ($soma % 11 < 2) {
+            $y = $cpfLimpo . 0;
+        } else {
+            $y = $cpfLimpo . 11 - $soma % 11;
+        }
+        $cpfLimpo = substr(preg_replace('/[^A-Za-z0-9]/', '', $cpf), 0, 10);
+        $x = 11;
+        $soma = 0;
+        for ($i = 0; $i < strlen($cpfLimpo); $i++) {
+            $soma += intval($cpfLimpo[$i]) * $x--;
+        }
+        if ($soma % 11 < 2) {
+            $y = $cpfLimpo . 0;
+        } else {
+            $y = $cpfLimpo . 11 - $soma % 11;
+        }
+        if ($cpfx == $y) {
+            $this->cpf = $cpfx;
+            $this->error = 0;
+        } else {
+            $this->error = 1;
+        }
     }
 }

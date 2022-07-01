@@ -23000,12 +23000,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Add",
+  data: function data() {
+    return {
+      dados: ""
+    };
+  },
   methods: {
     add: function add() {
       document.getElementById("form").action = "add";
+    },
+    del: function del() {
+      document.getElementById("form").action = "addCardDel";
     }
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get("add_show_img").then(function (res) {
+      return _this.dados = res.data;
+    });
   }
 });
 
@@ -23463,7 +23481,7 @@ var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNo
 var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
   "class": "border border-dark",
   type: "text",
-  name: "noveSenha",
+  name: "novaSenha",
   placeholder: "nova senha"
 }, null, -1
 /* HOISTED */
@@ -23702,7 +23720,7 @@ var _hoisted_1 = {
   "class": "regisBase"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<h1>Registrar</h1><div class=\"regiscenter\"><div class=\"regisCol1 card\"><input class=\"border border-dark\" type=\"text\" name=\"nome\" placeholder=\"nome\" value=\"Jose Comprador\"><br><input class=\"border border-dark\" type=\"text\" name=\"senha\" placeholder=\"senha\" value=\"12345-senha\"><br><input class=\"border border-dark\" type=\"text\" name=\"cpf\" placeholder=\"cpf\" value=\"72962940005\"><br><input class=\"border border-dark\" type=\"text\" name=\"ddd\" placeholder=\"ddd\" value=\"11\"><br><input class=\"border border-dark\" type=\"text\" name=\"telefone\" placeholder=\"telefone\" value=\"56273440\"><br><input class=\"border border-dark\" type=\"text\" name=\"email\" placeholder=\"email\" value=\"esd@esd\"><br><input class=\"border border-dark\" type=\"text\" name=\"enderecoNome\" placeholder=\"endereço nome\" value=\"Av. Brig. Faria Lima\"><br><input class=\"border border-dark\" type=\"text\" name=\"enderecoNumero\" placeholder=\"endereco numero\" value=\"1384\"></div><div class=\"regisCol2 card\"><input class=\"border border-dark\" type=\"text\" name=\"complemento\" placeholder=\"complemento\" value=\"5o andar\"><br><input class=\"border border-dark\" type=\"text\" name=\"bairro\" placeholder=\"bairro\" value=\"Jardim Paulistano\"><br><input class=\"border border-dark\" type=\"text\" name=\"cep\" placeholder=\"cep\" value=\"01452002\"><br><input class=\"border border-dark\" type=\"text\" name=\"cidade\" placeholder=\"cidade\" value=\"Sao Paulo\"><br><input class=\"border border-dark\" type=\"text\" name=\"estado\" placeholder=\"estado\" value=\"SP\"><br><input class=\"border border-dark\" type=\"text\" name=\"pais\" placeholder=\"pais\" value=\"BRA\"><br><input class=\"border border-dark\" type=\"date\" name=\"dataNascimento\" placeholder=\"dataNascimento\" value=\"\"><br><input class=\"border border-dark\" type=\"text\" name=\"areaCode\" placeholder=\"areaCode\" value=\"11\"></div></div>", 2);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<h1>Registrar</h1><div class=\"regiscenter\"><div class=\"regisCol1 card\"><label for=\"email\"> Email: <br><input id=\"email\" class=\"border border-dark\" type=\"text\" name=\"email\" placeholder=\"email\" value=\"comprador@uol.com.br\"></label><br><label for=\"senha\"> Senha: <br><input id=\"senha\" class=\"border border-dark\" type=\"text\" name=\"senha\" placeholder=\"senha\" value=\"\"></label><br><label for=\"nome\"> Nome: <br><input id=\"nome\" class=\"border border-dark\" type=\"text\" name=\"nome\" placeholder=\"nome\" value=\"Jose Comprador\"></label><br><label for=\"cpf\"> CPF: <br><input id=\"cpf\" class=\"border border-dark\" type=\"text\" name=\"cpf\" placeholder=\"cpf\" value=\"729629400056\"></label><br><label for=\"DDD\"> DDD: <br><input id=\"DDD\" class=\"border border-dark\" type=\"text\" name=\"ddd\" placeholder=\"ddd\" value=\"11\"></label><br><label for=\"telefone\"> Telefone: <br><input id=\"telefone\" class=\"border border-dark\" type=\"text\" name=\"telefone\" placeholder=\"telefone\" value=\"56273440\"></label><br><label for=\"endEndereco\"> Endereço: <br><input id=\"endEndereco\" class=\"border border-dark\" type=\"text\" name=\"enderecoNome\" placeholder=\"endereço nome\" value=\"Av. Brig. Faria Lima\"></label><br><label for=\"endNumero\"> Endereço Numero: <br><input id=\"endNumero\" class=\"border border-dark\" type=\"text\" name=\"enderecoNumero\" placeholder=\"endereco numero\" value=\"1384\"></label></div><div class=\"regisCol2 card\"><label for=\"complemento\"> Complemento: <br><input id=\"complemento\" class=\"border border-dark\" type=\"text\" name=\"complemento\" placeholder=\"complemento\" value=\"5o andar\"></label><br><label for=\"bairro\"> Bairro: <br><input id=\"bairro\" class=\"border border-dark\" type=\"text\" name=\"bairro\" placeholder=\"bairro\" value=\"Jardim Paulistano\"></label><br><label for=\"cep\"> CEP: <br><input id=\"cep\" class=\"border border-dark\" type=\"text\" name=\"cep\" placeholder=\"cep\" value=\"01452002\"></label><br><label for=\"cidade\"> Cidade: <br><input id=\"cidade\" class=\"border border-dark\" type=\"text\" name=\"cidade\" placeholder=\"cidade\" value=\"Sao Paulo\"></label><br><label for=\"estado\"> Estado: <br><input id=\"estado\" class=\"border border-dark\" type=\"text\" name=\"estado\" placeholder=\"estado\" value=\"SP\"></label><br><label for=\"país\"> País: <br><input id=\"país\" class=\"border border-dark\" type=\"text\" name=\"pais\" placeholder=\"pais\" value=\"BRA\"></label><br><label for=\"dataNascimento\"> Data Nascimento: <br><input class=\"border border-dark\" type=\"date\" name=\"dataNascimento\" placeholder=\"dataNascimento\" value=\"\"></label><br></div></div>", 2);
 
 var _hoisted_4 = {
   "class": "card"
@@ -23737,22 +23755,72 @@ var _hoisted_1 = {
   "class": "add_base"
 };
 var _hoisted_2 = {
-  "class": "add_center"
+  "class": "add_local_hist"
 };
 var _hoisted_3 = {
+  "class": "card add_hist_card"
+};
+var _hoisted_4 = ["src"];
+var _hoisted_5 = {
+  "class": "card-body"
+};
+var _hoisted_6 = {
+  style: {}
+};
+var _hoisted_7 = {
+  style: {}
+};
+var _hoisted_8 = {
+  style: {}
+};
+var _hoisted_9 = ["value"];
+var _hoisted_10 = {
+  "class": "add_center"
+};
+var _hoisted_11 = {
   "class": "add_item card"
 };
 
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<h5>Add SEUS PRODUTOS</h5><br><div class=\"card\"><input class=\"border border-dark\" type=\"text\" name=\"desc\" placeholder=\"nome do produto\"></div><br><div class=\"card btn btn-outline-dark\"> Categoria: <select name=\"nome\" id=\"nome\"><option>Escolha a Categoria</option><option value=\"celular\">celular</option><option value=\"game\">game</option><option value=\"notebook\">notebook</option></select></div><br><div class=\"card\"><input class=\"border border-dark\" type=\"text\" name=\"price\" placeholder=\"Price\"></div><br><div class=\"card\"><input class=\"btn btn-outline-dark\" type=\"file\" id=\"file\" name=\"img[]\" multiple></div><br>", 10);
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<h5>Add SEUS PRODUTOS</h5><br><div class=\"card\"><input class=\"border border-dark\" type=\"text\" name=\"desc\" placeholder=\"nome do produto\"></div><br><div class=\"card btn btn-outline-dark\"> Categoria: <select name=\"nome\" id=\"nome\"><option>Escolha a Categoria</option><option value=\"celular\">celular</option><option value=\"game\">game</option><option value=\"notebook\">notebook</option></select></div><br><div class=\"card\"><input class=\"border border-dark\" type=\"text\" name=\"price\" placeholder=\"Price\"></div><br><div class=\"card\"><input class=\"btn btn-outline-dark\" type=\"file\" id=\"file\" name=\"img[]\" multiple></div><br>", 10);
 
-var _hoisted_14 = {
+var _hoisted_22 = {
   "class": "card"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.dados, function (i) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+      key: i
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+      "class": "card card-img-top",
+      src: 'storage/' + JSON.parse(i.img)[0],
+      style: {
+        "height": "200px",
+        "width": "200px"
+      }
+    }, null, 8
+    /* PROPS */
+    , _hoisted_4), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(i.desc), 1
+    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", _hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(i.nome), 1
+    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", _hoisted_8, "R$ " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(i.price), 1
+    /* TEXT */
+    )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+      type: "submit",
+      value: i.id,
+      name: "id",
+      onClick: _cache[0] || (_cache[0] = function () {
+        return $options.del && $options.del.apply($options, arguments);
+      })
+    }, " Delete ", 8
+    /* PROPS */
+    , _hoisted_9)])]);
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     "class": "btn btn-outline-dark",
     type: "submit",
-    onClick: _cache[0] || (_cache[0] = function ($event) {
+    onClick: _cache[1] || (_cache[1] = function ($event) {
       return $options.add();
     }),
     value: "enviar"
@@ -24497,7 +24565,7 @@ var _hoisted_25 = {
   "class": "LoginCss"
 };
 
-var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<h5>Login</h5><br><div class=\"form-floating mb-3\"><input type=\"email\" class=\"form-control\" id=\"floatingInput\" name=\"email\" placeholder=\"name@example.com\" value=\"comprador@uol.com.br\"><label for=\"floatingInput\">Email address</label></div><div class=\"form-floating\"><input type=\"password\" class=\"form-control\" id=\"floatingPassword\" name=\"senha\" placeholder=\"Password\" value=\"12345-senha\"><label for=\"floatingPassword\">Password</label></div><br>", 5);
+var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<h5>Login</h5><br><div class=\"form-floating mb-3\"><input type=\"email\" class=\"form-control\" id=\"floatingInput\" name=\"email\" placeholder=\"name@example.com\" value=\"comprador@uol.com.br\"><label for=\"floatingInput\">Email address</label></div><div class=\"form-floating\"><input type=\"password\" class=\"form-control\" id=\"floatingPassword\" name=\"senha\" placeholder=\"Password\" value=\"\"><label for=\"floatingPassword\">Password</label></div><br>", 5);
 
 var _hoisted_31 = {
   "class": "card"
@@ -24946,7 +25014,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // import Cart from '../view/Cart2.vue'
 
 var routes = [{
   path: '/',

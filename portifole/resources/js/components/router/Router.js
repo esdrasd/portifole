@@ -6,7 +6,6 @@ import Notebook from '../view/Notebook.vue'
 import Add from '../view/Add.vue'
 import Comprar from '../view/Comprar.vue'
 import Cart from '../view/Cart.vue'
-// import Cart from '../view/Cart2.vue'
 
 const routes = [
     { path: '/', component: Home },
